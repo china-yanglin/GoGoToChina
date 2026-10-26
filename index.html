@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="page.title">GoGoToChina</title>
+    <meta name="author" content="OneRain.Ltd">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1,
+        minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="is-loading home">
+
+<header>
+    <div class="main">
+    <div class="logo"><img src="Images/Logo.png" alt="GoGoToChina Logo"></div>
+    <nav class="nav">
+        <a data-i18n="nav.home">首页</a>
+        <a data-i18n="nav.chinaTrip">中国之旅</a>
+        <a data-i18n="nav.destinations">目的地</a>
+        <a data-i18n="nav.guides">旅游指南</a>
+        <a data-i18n="nav.bestTime">最佳时间</a>
+        <a data-i18n="nav.festivals">中国节日</a>
+        <a data-i18n="nav.about">关于我们</a>
+
+        <!-- ★ 语言下拉 -->
+        <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-current" id="langBtn">
+                <span data-i18n="lang.name">中文</span>
+                <i class="arrow"></i>
+            </button>
+            <div class="lang-menu" id="langMenu">
+                <button data-lang="zh">中文</button>
+                <button data-lang="en">English</button>
+                <button data-lang="ja">日本語</button>
+            </div>
+        </div>
+    </nav>
+    </div>
+</header>
+    <div class="headinfo">
+        <div class="main">
+        <h1 data-i18n="hero.title" class="title en r gy6" id="typingTitle"></h1>
+        <h4 data-i18n="hero.subtitle" class="subtitle s">中国私人旅游 为您而设计</h4>
+        <div class="info" data-i18n="hero.desc">
+            规划一次量身定制的中国之旅，享受当地支持、灵活的行程安排以及遍及北京、上海、西安、桂林、成都、西藏等地的私人旅行体验。
+                  <a data-i18n="hero.btn" href="#">探索中国 →</a>
+        </div>
+  </div>
+    </div>
+
+
+<div class="bannerBox">
+    <video class="mainVbox-video" autoplay muted loop playsinline preload="auto" style="background: url('Video/index-v1.jpg') center center no-repeat;
+      background-size: contain;">
+            <source src="Video/DiscCN1.mp4" type="video/mp4">
+        </video>
+</div>
+
+<div class="serviceBox">
+    <div class="logo"><img src="Images/Logo.png" alt="GoGoToChina Logo"></div>
+    <h4 data-i18n="service.title">为您提供中国私人旅行规划服务</h4>
+    <div class="info" data-i18n="service.desc">
+        GoGoToChina是<b>东方国际旅行社</b>旗下的中国私人旅游品牌。<br>我们为国际旅行者量身定制中国之旅，包括家庭旅行、文化之旅、免签行程和私人定制旅游。
+    </div>
+    <div class="more">
+        <div data-i18n="service.btn1"><span class="b">中国旅行体验</span>
+            在中国规划私人旅行的实用本地知识</div>
+
+        <div data-i18n="service.btn2"><span class="b">中国本地专家</span>            
+            拥有实地经验的中国旅游专家</div>
+
+                    <div data-i18n="service.btn3"><span class="b">专为环球旅行者打造</span>            
+            为家庭、情侣、老年人、学校和商务旅行者提供规划支持</div>
+
+                    <div data-i18n="service.btn4"><span class="b">专职旅行顾问</span>            
+            为家庭、情侣、老年人、学校和商务旅行者提供规划支持</div>
+</div>
+</div>
+
+
+
+<div class="visaBox">
+    <div class="tip" data-i18n="visa.tip"><span>中国签证要求及入境规定 2026</span></div>
+    <h4 data-i18n="visa.title">2026年中国签证指南</h4>
+    <div class="info" data-i18n="visa.desc">
+        去中国需要签证吗？答案取决于您的护照类型、旅行目的和行程安排。<br>请先查看免签入境和过境选项。如果需要签证，请在申请前比较中国签证类型、申请要求、所需文件、费用和办理时间。
+    </div>
+    <div class="visainfo">
+        <div class="visa-item">
+            <div class="icon en b">10</div>
+            <div class="text" data-i18n="visa.item1">10天免签过境——最适合短期访问和多城市中转。</div>
+            <div class="item-desc" data-i18n="visa.item1-desc">适用于来自美国、英国、加拿大和 50 多个其他国家的旅客——非常适合经北京、上海、广州或深圳转机的旅客。</div>
+    </div>
+        <div class="visa-item">
+            <div class="icon en b">30</div>
+            <div class="text" data-i18n="visa.item2">30天免签入境——非常适合经典的中国行程</div>
+            <div class="item-desc" data-i18n="visa.item2-desc">
+适用于意大利、澳大利亚、西班牙、德国、法国、新西兰、比利时、阿联酋以及其他 29 个以上国家的公民。</div>
+        </div>
+        <div class="visa-item">
+            <div class="icon1 en b">Visa<br>Free</div>
+            <div class="text" data-i18n="visa.item2">区域免签计划——指定国家和旅行期限</div>
+            <div class="item-desc" data-i18n="visa.item2-desc">
+2025 年至 2026 年期间，来自拉丁美洲和海湾地区特定国家的游客可享受最多 30 天的免签停留。</div>
+        </div>
+
+
+
+    </div>
+    <div class="more">
+        <a data-i18n="visa.btn1">我需要签证码？</a>
+        <a data-i18n="visa.btn2">怎么申请中国签证</a>
+    </div>
+    <div class="tipinfo">
+        <span><i class="iconfont"></i><span data-i18n="visa.tag1">2026年最新新戏</span></span>
+        <span><i class="iconfont"></i><span data-i18n="visa.tag2">免签过境</span></span>
+        <span><i class="iconfont"></i><span data-i18n="visa.tag3">要求\文件\流程\费用</span></span>
+        <div class="">上次审核时间：2026 年 1 月 — 政策可能会有所变更</div>
+    </div>
+</div>
+
+<div class="tripBox">
+    <h4 data-i18n="trip.title">中国顶级旅游线路</h4>
+    <h6 data-i18n="trip.subtitle">由中国当地专业旅行家精心打造的专属私人路线。</h6>
+    <div class="tripinfo"></div>
+</div>
+
+<div class="monthBox">
+    <h4 data-i18n="month.title">2026年游览中国的最佳时间</h4>
+    <div class="info" data-i18n="month.desc">
+        中国地域辽阔，一年四季、每个月份都有适合游览的目的地。
+
+春季（4–5 月）与秋季（9–10 月）是全国范围内最受欢迎的旅行时段。气候温润舒适，非常适合打卡经典地标：长城、北京故宫、西安、桂林、张家界、九寨沟国家公园，以及长江游船。
+
+夏季炎热多雨、游客较多，但很适合前往山间避暑。
+冬季可以观赏雪景、泡温泉，打卡哈尔滨冰雪节；也可以去往中国南方，享受温暖冬日。
+
+出行请留意国内长假。春节与国庆黄金周期间，全国景点人流量巨大，酒店涨价、交通拥挤。偏爱安静旅途的游客建议避开这两个时段。
+
+这份指南结合天气、客流、旅行成本与分季节推荐线路，帮你挑选最合适的中国旅行时间。
+    </div>
+    <div class="weatherinfo">
+        <div class="city"></div>
+    </div>
+</div>
+
+<div class="welcomeBox">
+    <h4 data-i18n="welcome.title">为什么选择 GoGoToChina？</h4>
+    <div class="info" data-i18n="welcome.desc">
+        想要体验地道的中国私人旅行？GoGoToChina 是您可以托付的本地地接。每一段行程都为您专属打造，出行选择灵活，配套专人专业服务。本地导游深耕熟悉目的地。成千上万海外游客选择我们，开启省心、高品质的中国探索之旅。
+    </div>
+</div>
+
+<footer>
+    <div class="main">    <div class="txtlogo"><h4 class="title en b">GoGoToChina</h4></div>
+
+
+
+
+
+
+    <div class="footer-info">
+        <div class="logo"><img src="Images/Logo.png" alt="GoGoToChina Logo"></div>
+        <div class="info" data-i18n="footer.desc">
+            GoGoToChina 是东方国际旅行社旗下的中国私人旅游品牌。我们为国际旅行者量身定制中国之旅，包括家庭旅行、文化之旅、免签行程和私人定制旅游。
+        </div>
+        </div></div>
+
+</footer>
+
+<!-- ★ 全屏 Loading 遮罩 -->
+<div class="loading-mask" id="loadingMask">
+    <div class="loading-inner">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
+</div>
+
+<!-- 禁用 JS 兜底 -->
+<noscript>
+    <style>
+        .loading-mask { display: none !important; }
+        body.is-loading { opacity: 1 !important; }
+    </style>
+</noscript>
+<script>document.addEventListener('DOMContentLoaded', fitTitle);
+window.addEventListener('load', fitTitle);</script>
+<script>
+    
+(function () {
+    var currentLang = '';
+    var translations = {};
+    var loadingMask = document.getElementById('loadingMask');
+    var langDropdown = document.getElementById('langDropdown');
+    var langBtn = document.getElementById('langBtn');
+    var MIN_LOADING_TIME = 600;
+    var startTime = Date.now();
+
+    // ============ 判断用户语言 ============
+    function detectLang() {
+        try {
+            var saved = localStorage.getItem('preferredLang');
+            if (saved) return saved;
+        } catch (e) {}
+        var nav = (navigator.language || 'zh').toLowerCase();
+        if (nav.startsWith('ja')) return 'ja';
+        if (nav.startsWith('zh')) return 'zh';
+        return 'en';
+    }
+
+    // ============ 加载语言 JSON ============
+    function loadLang(lang) {
+        return new Promise(function (resolve, reject) {
+            if (translations[lang]) return resolve(translations[lang]);
+            fetch('lang/' + lang + '.json')
+                .then(function (res) {
+                    if (!res.ok) throw new Error('加载失败：' + lang);
+                    return res.json();
+                })
+                .then(function (data) {
+                    translations[lang] = data;
+                    resolve(data);
+                })
+                .catch(reject);
+        });
+    }
+
+    // ============ 应用翻译 ============
+    function applyTranslations(data) {
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n');
+            var text = data[key];
+            if (text !== undefined) el.innerHTML = text;
+        });
+
+        // 更新当前语言按钮里的名字
+        var langNameEl = document.querySelector('.lang-current [data-i18n="lang.name"]');
+        if (langNameEl && data['lang.name']) {
+            langNameEl.textContent = data['lang.name'];
+        }
+
+        document.documentElement.setAttribute('lang', currentLang);
+    }
+
+    // ============ 淡出 loading ============
+    function finishLoading() {
+        var elapsed = Date.now() - startTime;
+        var delay = Math.max(0, MIN_LOADING_TIME - elapsed);
+        setTimeout(function () {
+            document.body.classList.remove('is-loading');
+            loadingMask.classList.add('hide');
+        }, delay);
+    }
+
+    // ============ 切换语言 ============
+    function setLanguage(lang, isInitial) {
+        if (lang === currentLang && !isInitial) return;
+        if (!isInitial) loadingMask.classList.remove('hide');
+
+        loadLang(lang).then(function (data) {
+            currentLang = lang;
+            applyTranslations(data);
+
+            // 菜单高亮
+            document.querySelectorAll('.lang-menu button').forEach(function (btn) {
+                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            });
+
+            try { localStorage.setItem('preferredLang', lang); } catch (e) {}
+
+            if (isInitial) finishLoading();
+            else loadingMask.classList.add('hide');
+        }).catch(function (err) {
+            console.error(err);
+            if (isInitial) finishLoading();
+            else loadingMask.classList.add('hide');
+        });
+    }
+
+    // ============ 语言下拉交互 ============
+    langBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        langDropdown.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.lang-menu button').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            setLanguage(this.getAttribute('data-lang'), false);
+            langDropdown.classList.remove('open');
+        });
+    });
+
+    document.addEventListener('click', function () {
+        langDropdown.classList.remove('open');
+    });
+
+    // ============ 初始化 ============
+    setLanguage(detectLang(), true);
+
+})();
+// ============ 打字机效果（打完停3秒，消失停1秒） ============
+(function () {
+    var typeEl = document.getElementById('typingTitle');
+    if (!typeEl) return;
+
+    var timer = null;
+    var fullText = 'GoGoToChina';
+    var bStartIndex = 6;
+
+    function startTyping() {
+        clearTimeout(timer);
+
+        // 1. 瞬间完全透明（让用户看不到内部清理过程）
+        typeEl.style.opacity = '0';
+
+        // 2. 透明状态下，清空并重置 DOM
+        setTimeout(function () {
+            typeEl.innerHTML = ''; // 彻底清空
+
+            var textBefore = document.createTextNode('');
+            var bTag = document.createElement('b');
+            typeEl.appendChild(textBefore);
+            typeEl.appendChild(bTag);
+
+            var index = 0;
+            var isPausing = false;
+
+            // 3. 开始逐个打字
+            function type() {
+                if (isPausing) return;
+
+                if (index < fullText.length) {
+                    var char = fullText[index];
+
+                    if (index < bStartIndex) {
+                        textBefore.textContent += char;
+                    } else {
+                        bTag.textContent += char;
+                    }
+
+                    index++;
+                    timer = setTimeout(type, 150); // 打字速度 150ms
+                } else {
+                    // 4. 字母打完，停 3 秒
+                    isPausing = true;
+                    timer = setTimeout(function () {
+                        // 这里什么也不做，让它进入下一次 startTyping 循环
+                        startTyping();
+                    }, 3000); 
+                }
+            }
+
+            // ★ 5. 重置完了，保持透明，等待 1 秒后再显示并开始打字
+            setTimeout(function () {
+                typeEl.style.opacity = '1'; // 恢复显示
+                type(); // 开始出字
+            }, 1000); 
+
+        }, 50); // 用 50ms 的缓冲让透明生效
+    }
+
+    // 首次页面加载，先等 1 秒再开始
+    setTimeout(startTyping, 1000);
+
+})();
+</script>
+
+</body>
+</html>
