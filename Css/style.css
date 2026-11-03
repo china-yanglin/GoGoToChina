@@ -17,7 +17,7 @@ body.is-loading {
 .lang-dropdown {
     position: relative;
     display: inline-block;
-    margin-left: auto;
+    margin-left: 0;
 }
 
 .lang-current {
@@ -54,7 +54,7 @@ body.is-loading {
 .lang-menu {
     position: absolute;
     top: calc(100% + 8px);
-    right: 0;
+    left: 0;
     min-width: 130px;
     background: #fff;
     border: 1px solid #e5e5e5;
@@ -95,12 +95,12 @@ body.is-loading {
 }
 
 
+
 @font-face {
-  font-family: 'iconfont';
-  /* Project id 5230700 */
-  src: url('//at.alicdn.com/t/c/font_5230700_kb8gu7j3ei.woff2?t=1789398448567') format('woff2'),
-    url('//at.alicdn.com/t/c/font_5230700_kb8gu7j3ei.woff?t=1789398448567') format('woff'),
-    url('//at.alicdn.com/t/c/font_5230700_kb8gu7j3ei.ttf?t=1789398448567') format('truetype');
+  font-family: 'iconfont';  /* Project id 5230700 */
+  src: url('//at.alicdn.com/t/c/font_5230700_lwo61ko5w4.woff2?t=1793688206056') format('woff2'),
+       url('//at.alicdn.com/t/c/font_5230700_lwo61ko5w4.woff?t=1793688206056') format('woff'),
+       url('//at.alicdn.com/t/c/font_5230700_lwo61ko5w4.ttf?t=1793688206056') format('truetype');
 }
 
 @font-face {
@@ -123,59 +123,35 @@ body.is-loading {
 
 @font-face {
   font-family: 'ORFont';
-  src: url('../Font/Pliant-Thin.woff2') format('woff2');
+  src: url('../Font/BebasNeue-Thin.woff2') format('woff2');
   font-weight: 100;
   font-display: swap;
 }
 @font-face {
   font-family: 'ORFont';
-  src: url('../Font/Pliant-ExtraLight.woff2') format('woff2');
+  src: url('../Font/BebasNeue-Light.woff2') format('woff2');
   font-weight: 200;
   font-display: swap;
 }
 @font-face {
   font-family: 'ORFont';
-  src: url('../Font/Pliant-Light.woff2') format('woff2');
+  src: url('../Font/BebasNeue-Book.woff2') format('woff2');
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
   font-family: 'ORFont';
-  src: url('../Font/Pliant-Regular.woff2') format('woff2');
+  src: url('../Font/BebasNeue-Regular.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'ORFont';
-  src: url('../Font/Pliant-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'ORFont';
-  src: url('../Font/Pliant-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'ORFont';
-  src: url('../Font/Pliant-Bold.woff2') format('woff2');
+  src: url('../Font/BebasNeue-Bold.woff2') format('woff2');
   font-weight: 700;
   font-display: swap;
 }
-@font-face {
-  font-family: 'ORFont';
-  src: url('../Font/Pliant-ExtraBold.woff2') format('woff2');
-  font-weight: 800;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'ORFont';
-  src: url('../Font/Pliant-Black.woff2') format('woff2');
-  font-weight: 900;
-  font-display: swap;
-}
-
 
 
 
@@ -230,32 +206,105 @@ a {
 .bk {
   color: #000;
 }
-
+.oy6{color:#f60}
 .gy6 {
   color: #666;
 }
 .red{color:#f00}
-.home header{width: 100%; margin: 0 auto;position:fixed;top:0;background: #fff;z-index: 999;box-shadow: 0 2px 4px rgba(0,0,0,.1);height: 60px;line-height: 60px}
-.home header .logo{width: 200px; height: 60px;padding:10px 0 }
-.home header nav{display:flex; position: absolute; right: 0; top:0;line-height: 60px;gap:20px}
-.home header nav a{color:#444;font-size:16px}
-.home .headinfo{}
-.home .headinfo .main{max-width: 1400px;height:460px; margin: 0 auto;position: relative;}
+.main{max-width:1400px; margin:0 auto;position: relative;width: auto;}
+.home header {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    height: 200px;
+    line-height: 60px;
+    background: linear-gradient(to bottom, rgba(0, 36, 64, .8) 0%, rgba(0, 36, 64, 0) 100%);
+    /* ★ 加上过渡动画，让变化更顺滑 */
+    transition: background 0.2s ease, height 0.2s ease;
+}
+.home header .logo{width: 200px; height: 60px;padding:10px 0 0 0;position: absolute; left: 60%; top:5px; }
+.home header .link{position: absolute; right: 0; top: 0; line-height: 60px; display: flex; gap: 20px; }
+.home header .link a{color: #fff; transition: color 0.5s ease;}
+.home header .link i{font-size: 30px;transition: color 0.5s ease;}
+.home header nav{display:flex; line-height: 60px;gap:20px;width: 60%;}
+.home header nav a {
+  font-size: 16px;
+    color: #fff; /* 因为背景是半透明深色，字一般设为白色 */
+    transition: color 0.5s ease;
+}
+.home header.scrolled nav a {
+    color: #444;
+}
+.home header.scrolled .link a {
+    color: #999;
+}
+.home header.scrolled {
+    height: 60px; /* 高度变矮 */
+    z-index: 999;
+    background: #fff; /* 背景变白 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* 顺便加个淡淡的阴影，更有质感 */
+}
+.mpd {
+    position: absolute;
+    left: 60%;
+    top: 220px;
+    min-width: 400px;
+    overflow: hidden;
+    z-index: 100;
+    
+    /* 初始状态：完全透明，缩小，并往下偏移 */
+    opacity: 0;
+    transform: scale(0) translateY(100px);
+    transform-origin: center center;
+    
+    /* 默认的过渡效果，匹配你要求的 0.3s 和 0.2s */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                opacity 0.3s ease;
+}
+/* ★ 第一步：突然放大到 120% */
+.mpd.step-1 {
+    opacity: 1;
+    transform: scale(1.2) translateY(0);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                opacity 0.3s ease;
+}
 
+/* ★ 第二步：0.2s 后回弹到原始尺寸 */
+.mpd.step-2 {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transition: transform 0.2s ease-out, 
+                opacity 0.2s ease-out;
+}
 
+/* ★ 第三步：回弹后，开始上下缓慢浮动 */
+.mpd.step-3 {
+    /* 用 animation 接管上下浮动 */
+    animation: mpdFloat 3s ease-in-out infinite;
+}
 
-.home h1.title{font-size:160px;margin-top: 200px;line-height: 120px;color:#999;height: 120px;}
-.home h1.title b{color:#000}
+/* 浮动的关键帧（只有上下浮动，幅度为 8px） */
+@keyframes mpdFloat {
+    0%   { transform: scale(1) translateY(0); }
+    50%  { transform: scale(1) translateY(-20px); } /* 向上浮起 8px */
+    100% { transform: scale(1) translateY(0); }
+}
+.home h1.title{font-size:min(14vw, 330px);line-height: 100px;color:#fff;text-shadow: 0 0 40px rgba(0,0,0,.2);
+  height: 100px;position: absolute;top:250px;text-align: center;}
+.home h1.title b{color:#f00}
 /* ★ 专门给 China 定制的样式 */
-.home .headinfo .title .china-word {
+.home .bannerBox .title .china-word {
     /* 把你原本给 <b> 写的样式搬到这里，或者加 !important */
     color: #f60; 
     font-weight: 900;
     /* 其他样式... */
 }
-.home h4.subtitle{font-size: 60px;color:#444}
-.home .headinfo .info{font-size: 20px;margin-top: 20px;  color:#666; max-width: 600px}
-.home .headinfo .info a {
+.home h4.subtitle{font-size:min(5vw, 70px);color:#f60;position: absolute;top:390px;}
+
+.home .bannerBox .info{font-size: max(.8vw, 14px);color:#666; max-width: 700px;position: absolute;top:490px;left:0;width: 50vw;}
+.home .bannerBox .info a {
     font-size: 20px;
     background: #f90;
     color: #fff;
@@ -265,44 +314,407 @@ a {
     display: inline-block;
     transition: background 0.3s ease;   /* ★ 从 color 改成 background */
 }
-.home .headinfo .info a:hover {
+.home .bannerBox .info a:hover {
     background: #f60;
 }
-.home .bannerBox{width:100%}
+.home .bannerBox{width:100%;height: 100%;max-height: 650px;}
+.home .bannerBox .main{}
 
 .mainVbox-video {
-    width: 100%;
-    aspect-ratio: 21 / 9;
-    object-fit: cover;}
+  position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+min-height: 70vh;
+max-height: 750px;
+aspect-ratio: 21 / 9;
+object-fit: cover;
 
-.home .serviceBox{padding: 100px 0;max-width: 1400px;margin: 0 auto;position: relative; }
+/* Corrected Mask: Solid from 0% to 20%, then lineally fades to transparent at 100% */
+-webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .8) 5%, rgba(0, 0, 0, 0) 100%);
+mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .8) 5%, rgba(0, 0, 0, 0) 100%);
+
+
+}
+
+.home .serviceBox{padding: 100px 0 0 0;max-width: 1400px;margin: 0 auto;position: relative; }
 .home .serviceBox .logo{width: 400px; height: auto; }
-.home h4{font-size: 60px; color:#444; font-weight: 100; }
-.home .serviceBox .info{font-size: 20px; color:#666; margin-top: 20px;}
-.home .serviceBox .more{display: flex;margin:50px 0;border-top: 1px dotted #e0e0e0;padding-top: 50px; }
-.home .serviceBox .more div{padding-right: 20px;width: 25%;color: #999;border-right: 1px dotted #e0e0e0; }
+.home h4{font-size: 60px;color:#333}
+.home h6 {
+    font-size: 20px;
+    color: #666;
+    margin: 0 0 20px;
+    font-weight: 300;
+    transition: .3s;}
+
+
+
+.home .serviceBox .info{font-size: 16px; color:#666; margin-top: 20px;}
+.home .serviceBox .more{display: flex;margin:50px 0;border-top: 1px solid #f5f5f5;padding-top: 50px; }
+.home .serviceBox .more div{padding:0 20px;width: 25%;color: #999;border-right: 1px dotted #e0e0e0;font-size: 14px;}
+.home .serviceBox .more div:last-child{border-right: none;}
 .home .serviceBox .more span{display:block;font-size: 20px; color:#666;}
-.home .visaBox{padding: 100px 0;max-width: 1400px;margin: 0 auto;position: relative; }
-.home .visaBox .tip {border-bottom: 1px solid #e0e0e0;height:12px;margin-bottom:20px;}
-.home .visaBox .tip span{border-radius:100px;background:#999;color:#fff;display: inline-block;
-  padding: 2px 20px;font-size: 14px; margin-bottom: 20px;font-weight:100}
-  .home .visaBox .visainfo .visa-item{padding: 20px 0;position: relative;padding-left:90px}
-    .home .visaBox .visainfo .visa-item .icon{font-size: 60px;text-align: center;width: 80px;
-    position: absolute;left: 0;line-height: 60px;}
-        .home .visaBox .visainfo .visa-item .icon1{font-size: 30px;text-align: center;width: 80px;
+.home .visaBox{padding:0 0 100px;margin: 0 auto;position: relative; }
+.home .visaBox h4{background: #fff;
+    display: inline-block;position: absolute;
+    top: -80px;
+    left: -40px;
+    padding: 10px 40px;}
+
+.home .visaBox .visaimg{max-width:500px;position: absolute;top: 50px;right:0;z-index: 10;width: 36vw;}
+.home .visaBox .Rinfo{max-width:900px;padding-top: 40px;width: 60%;}
+
+
+
+.home .visaBox .visabg{width: 100%;height:600px;background: url('../Images/visabg1.jpg') center center no-repeat;background-size: cover;}
+.home .visaBox .tip {border-bottom: 1px solid #e0e0e0;height:12px;margin-bottom:50px;}
+
+.home .visaBox .tip span{border-radius:100px;background:#f90;color:#fff;display: inline-block;
+  padding: 2px 20px;font-size: 14px; margin-bottom: 20px;font-weight:400}
+  .home .visaBox .visainfo{padding:20px 0;}
+  .home .visaBox .visainfo .visa-item{padding: 20px 0;position: relative;padding-left:90px;border-left: 6px solid #f90;border-radius: 0 100px 100px 0 ;}
+  .home .visaBox .visainfo .visa-item:nth-child(2){background: #ebf4fd;border-left: 6px solid #1d5198;}
+
+  .home .visaBox .visainfo .visa-item:hover{background: #f6faff;}
+
+    .home .visaBox .visainfo .visa-item .icon{font-size: 60px;text-align: center;width: 80px;color: #f60;
+    position: absolute;left: 0;line-height: 70px;}
+        .home .visaBox .visainfo .visa-item .icon1{font-size: 30px;text-align: center;width: 80px;color: #fc0;
     position: absolute;left: 0;line-height: 30px;}
         .home .visaBox .visainfo .visa-item .text{font-size: 18px;height: 30px;line-height: 30px;}
-        .home .visaBox .visainfo .visa-item .item-desc{font-size: 16px;height: 30px;line-height: 30px;}
-        .home .visaBox .more{}
+        .home .visaBox .visainfo .visa-item .item-desc{font-size: 14px;height: 30px;line-height: 30px;overflow: hidden;}
+
         .home .visaBox .tipinfo{font-size: 16px;color:#666;line-height: 30px;margin-top: 20px}
 
-.main{width:1400px; margin:0 auto;position: relative;}
+.home .videoBox{background: #f5f5f5;padding: 100px 0;position: relative;}
+.home .videoBox .mpd1{width: 400px;position: absolute;top: -326px;left: 60%;z-index: 100; }
+
+
+.home .videoBox h6{font-size: 20px;color:#999;margin:0 0 20px;font-weight: 400;transition: .3s;}
+.home .videoBox h6.videotitle{font-size:20px;line-height:20px;height:20px;overflow: hidden;color:#444;margin: 0;}
+
+
+.home .videoBox .videoimg {padding-top: 50%;margin:20px 0;
+    width: 100%;text-align: center;  box-shadow: 0 0 0 rgba(255, 102, 0 ,0);transition: 0.3s;opacity: .8;
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 3 / 4;
+    position: relative; /* 必须有，作为伪元素的定位参考 */
+}
+.home .videoBox .videoimg i{font-size:0;height: 100px;line-height: 100px;margin-top:-50px;position: relative;z-index:1;color: #fff;opacity: .8;transition: all 0.3s ease;}
+/* ★ 利用伪元素继承内联的背景图 */
+.home .videoBox .videoimg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit; /* ★ 核心：继承父级的背景图 */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+}
+
+/* ★ hover 到 a 标签时，放大伪元素 */
+.home .videoBox a:hover .videoimg::before {
+    transform: scale(1.1);
+}
+.home .videoBox a:hover .videoimg {
+    box-shadow: 0 0 20px rgba(255, 102, 0,.5);opacity: 1;
+}
+.home .videoBox a:hover .videoimg i{font-size:100px}
+.home .videoBox .swiper-slide{padding: 0 20px;}
+
+.home .GochinaBox{padding: 100px 0;position: relative;}
+.home .GochinaBox .mpd2 {
+    width: 300px;
+    position: absolute;
+    top: -120px;
+    /* 删掉固定的 left: 26%; 让动画从 16% 开始 */
+    z-index: 100;
+    
+    /* ★ 总时长 12 秒，匀速，无限循环 */
+    animation: mpd2MoveFade 12s linear infinite;
+}
+
+@keyframes mpd2MoveFade {
+    /* 0 秒：在 16% 位置，透明 */
+    0% {
+        left: 16%;
+        opacity: 0;
+    }
+    /* 0.5 秒 (约 4.16%)：淡入完成 */
+    4.16% {
+        left: 16.5%;
+        opacity: 1;
+    }
+    /* 9.5 秒 (约 79.16%)：一直移动到 25%，并且保持不透明 */
+    79.16% {
+        left: 25%;
+        opacity: 1;
+    }
+    /* 10 秒 (约 83.33%)：到达 26% 位置，开始变透明 */
+    83.33% {
+        left: 26%;
+        opacity: 0;
+    }
+    /* 10 秒到 12 秒之间（83.33% 到 100%）：保持隐藏状态，实现停 2 秒的效果 */
+    100% {
+        left: 26%;
+        opacity: 0;
+    }
+}
+.home .GochinaBox h4.title,.home .GochinaBox h6{text-align: right;}
+.home .GochinaBox .more{padding-left:280px}
+.home .GochinaBox .more a{display: inline-block;background:#e0e0e0;color:#333;font-size:16px;padding:5px 20px}
+.home .GochinaBox .info{display: flex;margin-top: 50px;gap:20px}
+.home .GochinaBox .info .s1title{font-size:24px;padding:20px 0 10px;color:#666;border-bottom: 1px solid #f0f0f0;margin-bottom: 10px;}
+.home .GochinaBox .info .stitle{padding:0;font-size:16px;line-height: 24px;}
+.home .GochinaBox .info .tip{width:33.33%;margin:0 ;position: relative;border-radius: 20px;overflow: hidden;background: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,.1);text-align: right;border-bottom: 5px solid #f0f0f0;transition: .3s;}
+.home .GochinaBox .info .tip .morenum {font-size: 30px; color:#999; }
+.home .GochinaBox .info .tip  .tipinfo{position: relative;margin-top: -30px;padding:0 20px 20px;}
+.home .GochinaBox .info .tip .tiptitle{display:inline-block;background: #fff;padding: 5px 20px;font-size:14px;color:#1d5198;margin-right: -20px;}
+.home .GochinaBox .info .tip:hover{border-bottom: 5px solid #1d5198;background: #fffefa;box-shadow: 0 0 20px rgba(255,102,0,.4)}
+.home .GochinaBox .info .tip:hover .s1title{color:#1d5198}
+
+.home .tripBox {
+    padding: 100px 0;
+    position: relative;
+    margin-top: -150px;
+    z-index: -1;box-shadow: 0 0 50px rgba(0, 0, 0, .2);
+    
+    /* ★ 加上动画：动画名 20秒 匀速循环 */
+    animation: bgColorChange 12s infinite alternate;
+}
+
+/* ★ 定义 4 种颜色的动画关键帧 */
+@keyframes bgColorChange {
+    0%, 100% {
+        background-color: #f0f7ef; /* 春：初芽绿 */
+    }
+    25% {
+        background-color: #eef6fb; /* 夏：天空蓝 */
+    }
+    50% {
+        background-color: #fbf6ec; /* 秋：暖麦黄 */
+    }
+    75% {
+        background-color: #f4f6f8; /* 冬：冰雪灰 */
+    }
+}
+
+.home .tripBox h4{margin-top: 50px;}
+.home .tripBox h6{margin-bottom:100px}
+.mpd4 {
+    position: absolute;
+    width: 260px;
+    top: -100px;
+    right: 15%;
+    
+    /* ★ 核心：动画名 4秒 匀速平滑 无限循环 */
+    animation: mpd4Float 3s ease-in-out infinite;
+}
+
+/* 定义上下浮动的关键帧 */
+@keyframes mpd4Float {
+    0%, 100% {
+        transform: translateY(0); /* 起始状态：回到原位 */
+    }
+    50% {
+        transform: translateY(-10px); /* 中间状态：向上移动 10px */
+    }
+}
+.home .tripBox .tripinfo {display: flex;gap:20px}
+.home .tripBox .tripinfo .trip-item {width: 25%;position: relative;overflow: hidden;}
+.home .tripBox .tripinfo .trip-item .bg1{font-size: 200px;color:#fff;position: absolute;top:-50px;right:-10px;z-index: -1;}
+.home .tripBox .tripinfo .trip-item .sentitle{font-size:50px;line-height: 80px;color: #1d5198;}
+.home .tripBox .tripinfo .trip-item .seninfo{font-size: 14px;color:#666;line-height: 24px;margin-top: -1px;border-top: 1px solid #e0e0e0;padding-top: 20px;;}
+.home .tripBox .tripinfo .trip-item .dm{padding: 5px 0; display: inline-block;position: relative;font-size:20px;color:#666}
+.home .tripBox .tripinfo .trip-item .dm::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #666; 
+}
+/* 顶层滑动的橙色线 */
+.home .tripBox .tripinfo .trip-item .dm::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%; /* ★ 初始宽度为 0 */
+    height: 4px;
+    background-color: #f60; /* 橙色 */
+    transition: width 0.5s ease; /* ★ 宽度变化时的过渡动画 */
+}
+
+/* ★ 当鼠标悬停在 trip-item 上时，橙色线宽度从 0 变到 100% */
+.home .tripBox .tripinfo .trip-item:hover .dm::after {
+    width: 100%;
+}
+
+
+.home .videoBox .videotime{margin:8px 0}
+.home .videoBox .videotime span{border-radius: 20px;font-size: 12px;background: #1d5198;color:#fff;padding:4px 6px;margin-right:4px}
+.home .videoBox .dsp{font-size: 14px;color:#666;line-height: 20px;height: 60px;overflow: hidden;margin: 0 0 8px 0;transition: .3s;}
+.home .videoBox a:hover h6{color:#1d5198}
+.home .videoBox a:hover .dsp{color:#444}
+
+
+.home .welcomeBox{padding: 100px 0;position: relative;text-align: center;background:#f5f5f5;height: 620px;z-index: -2;}
+.home .welcomeBox .winfo{display: flex;margin-top: 20px;}
+.home .welcomeBox .winfo .witem{width: 25%;padding: 20px;font-size: 16px;color:#444;transition: .3s;font-weight: 400;margin-top: 0;transition: .3s;}
+.home .welcomeBox .winfo .witem  h6{font-weight: 400;}
+.home .welcomeBox .winfo .witem:hover{margin-top: -10px;}
+.home .welcomeBox .winfo .witem i{font-size:100px;color:#999;transition: .3s;}
+.home .welcomeBox .winfo .witem:hover i{color:#f60}
+.home .welcomeBox .winfo .witem:hover h6{color:#444}
+footer {padding: 100px 0 0;background: url(../Images/mbg2.jpg) top center no-repeat; background-size: cover;position: relative;}
+footer .info{font-size: 16px;color:#999}
+
+
+.home footer .txtlogo {
+    width: 100%;       /* 父级占满宽 */
+    overflow: hidden;  /* 防止偶尔误差导致横向滚动条 */
+
+}
+.mpd3{width: 260px;
+    position: absolute;
+    top: -230px;
+    right: 13.5%;
+    z-index: 100;}
+
+.home footer h4.title {
+    font-size: 100px;  /* 初始兜底大小 */
+    white-space: nowrap; /* 绝对不换行 */
+    margin: 0;
+    display: inline-block;
+    line-height: 1;
+}
 
 
 
+        .home .footer-info{max-width: 1400px;border-top: 1px solid #f0f0f0;display: flex;line-height: 60px;padding: 10px 0;position: relative;}
+        footer .footer-info .footer-container{line-height: 14px;position: absolute;top:16px;right: 0;text-align: right;font-size: 14px;color:#999}
+        .home .logo{width: 200px; height: 60px;}
 
-.txtlogo{width:100%}
-.home footer h4.title{font-size:10.6vw;white-space: nowrap;font-weight: 700;}
 
-        .home .footer-info{max-width: 1400px;margin: 0 auto; }
-        .home .logo{width: 200px; height: 60px;padding:10px 0 }
+/* ================= 修复 Loading 遮罩 ================= */
+.loading-mask {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+}
+.loading-mask.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+.loading-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.loading-logo {
+    width: 200px;
+    height: auto;
+    animation: pulse 1.5s infinite alternate;
+}
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.05); opacity: 1; }
+}
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #f0f0f0;
+    border-top-color: #f60;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ================= 视频弹窗 ================= */
+.video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.video-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+.modal-content {
+    position: relative;
+    z-index: 2;
+    max-width: 324px; /* 适配竖屏视频 */
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.video-modal.open .modal-content {
+    transform: scale(1);
+}
+.iframe-wrapper {
+    width: 324px;
+    height: 720px;
+    /* aspect-ratio: 9 / 16; 抖音通常是 9:16 竖屏 */
+    position: relative;
+}
+.iframe-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.modal-close:hover {
+    background: #f60;
+}
+
+/* 修复 A 标签默认跳转 */
+.home .videoBox a.video-play-btn {
+    cursor: pointer;
+}
+

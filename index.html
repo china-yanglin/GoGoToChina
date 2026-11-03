@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <title data-i18n="page.title">GoGoToChina</title>
     <meta name="author" content="OneRain.Ltd">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1,
-        minimum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/swiper-bundle.min..css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,7 +13,6 @@
 
 <header>
     <div class="main">
-    <div class="logo"><img src="Images/Logo.png" alt="GoGoToChina Logo"></div>
     <nav class="nav">
         <a data-i18n="nav.home">首页</a>
         <a data-i18n="nav.chinaTrip">中国之旅</a>
@@ -23,39 +21,47 @@
         <a data-i18n="nav.bestTime">最佳时间</a>
         <a data-i18n="nav.festivals">中国节日</a>
         <a data-i18n="nav.about">关于我们</a>
-
         <!-- ★ 语言下拉 -->
         <div class="lang-dropdown" id="langDropdown">
             <button class="lang-current" id="langBtn">
                 <span data-i18n="lang.name">中文</span>
                 <i class="arrow"></i>
             </button>
-            <div class="lang-menu" id="langMenu">
-                <button data-lang="zh">中文</button>
-                <button data-lang="en">English</button>
-                <button data-lang="ja">日本語</button>
-            </div>
+<div class="lang-menu" id="langMenu">
+    <button data-lang="zh">中文</button>
+    <button data-lang="en">English</button>
+    <button data-lang="th">🇹🇭 ภาษาไทย</button>
+    <button data-lang="es">🇪🇸 Español</button>
+    <button data-lang="fr">🇫🇷 Français</button>
+    <button data-lang="it">🇮🇹 Italiano</button>
+    <button data-lang="de">🇩🇪 Deutsch</button>
+        <button data-lang="ja">🇯🇵 日本語</button>
+</div>
         </div>
     </nav>
+        <div class="logo"><img src="Images/Logo.png" alt="GoGoToChina Logo"></div>
+        <div class="link">
+            <a href="#"><i class="iconfont">&#xea07;</i></a>
+            <a href="#"><i class="iconfont">&#xe653;</i></a>
+            <a href="#"><i class="iconfont">&#xe66c;</i></a>
+            <a href="#"><i class="iconfont">&#xe83b;</i></a>
+        </div>
     </div>
 </header>
-    <div class="headinfo">
-        <div class="main">
-        <h1 data-i18n="hero.title" class="title en r gy6" id="typingTitle"></h1>
-        <h4 data-i18n="hero.subtitle" class="subtitle s">中国私人旅游 为您而设计</h4>
-        <div class="info" data-i18n="hero.desc">
-            规划一次量身定制的中国之旅，享受当地支持、灵活的行程安排以及遍及北京、上海、西安、桂林、成都、西藏等地的私人旅行体验。
-                  <a data-i18n="hero.btn" href="#">探索中国 →</a>
-        </div>
-  </div>
-    </div>
-
 
 <div class="bannerBox">
-    <video class="mainVbox-video" autoplay muted loop playsinline preload="auto" style="background: url('Video/index-v1.jpg') center center no-repeat;
-      background-size: contain;">
-            <source src="Video/DiscCN1.mp4" type="video/mp4">
-        </video>
+    <video class="mainVbox-video" autoplay muted loop playsinline preload="auto" style="background: url('Video/index-v1.jpg') center center no-repeat; background-size: contain;">
+        <source src="Video/DiscCN1.mp4" type="video/mp4">
+    </video>
+    <div class="main">
+        <div class="mpd"><img src="Images/MPD.png" alt="MPD"></div>
+        <h1 data-i18n="hero.title" class="title en r gy6" id="typingTitle"></h1>
+        <h4 data-i18n="hero.subtitle" class="subtitle wt">中国私人旅游 为您而设计</h4>
+        <div class="info" data-i18n="hero.desc">
+            规划一次量身定制的中国之旅，享受当地支持、灵活的行程安排以及遍及北京、上海、西安、桂林、成都、西藏等地的私人旅行体验。<br>
+            <a href="#" class="btn-primary">探索中国 →</a>
+        </div>
+    </div>
 </div>
 
 <div class="serviceBox">
@@ -65,307 +71,668 @@
         GoGoToChina是<b>东方国际旅行社</b>旗下的中国私人旅游品牌。<br>我们为国际旅行者量身定制中国之旅，包括家庭旅行、文化之旅、免签行程和私人定制旅游。
     </div>
     <div class="more">
-        <div data-i18n="service.btn1"><span class="b">中国旅行体验</span>
-            在中国规划私人旅行的实用本地知识</div>
-
-        <div data-i18n="service.btn2"><span class="b">中国本地专家</span>            
-            拥有实地经验的中国旅游专家</div>
-
-                    <div data-i18n="service.btn3"><span class="b">专为环球旅行者打造</span>            
-            为家庭、情侣、老年人、学校和商务旅行者提供规划支持</div>
-
-                    <div data-i18n="service.btn4"><span class="b">专职旅行顾问</span>            
-            为家庭、情侣、老年人、学校和商务旅行者提供规划支持</div>
+        <div data-i18n="service.btn1"><span class="b">中国旅行体验</span>在中国规划私人旅行的实用本地知识</div>
+        <div data-i18n="service.btn2"><span class="b">中国本地专家</span>拥有实地经验的中国旅游专家</div>
+        <div data-i18n="service.btn3"><span class="b">专为环球旅行者打造</span>为家庭、情侣、老年人、学校和商务旅行者提供规划支持</div>
+        <div data-i18n="service.btn4"><span class="b">专职旅行顾问</span>为家庭、情侣、老年人、学校和商务旅行者提供规划支持</div>
+    </div>
 </div>
-</div>
-
-
 
 <div class="visaBox">
-    <div class="tip" data-i18n="visa.tip"><span>中国签证要求及入境规定 2026</span></div>
-    <h4 data-i18n="visa.title">2026年中国签证指南</h4>
-    <div class="info" data-i18n="visa.desc">
-        去中国需要签证吗？答案取决于您的护照类型、旅行目的和行程安排。<br>请先查看免签入境和过境选项。如果需要签证，请在申请前比较中国签证类型、申请要求、所需文件、费用和办理时间。
-    </div>
-    <div class="visainfo">
-        <div class="visa-item">
-            <div class="icon en b">10</div>
-            <div class="text" data-i18n="visa.item1">10天免签过境——最适合短期访问和多城市中转。</div>
-            <div class="item-desc" data-i18n="visa.item1-desc">适用于来自美国、英国、加拿大和 50 多个其他国家的旅客——非常适合经北京、上海、广州或深圳转机的旅客。</div>
-    </div>
-        <div class="visa-item">
-            <div class="icon en b">30</div>
-            <div class="text" data-i18n="visa.item2">30天免签入境——非常适合经典的中国行程</div>
-            <div class="item-desc" data-i18n="visa.item2-desc">
-适用于意大利、澳大利亚、西班牙、德国、法国、新西兰、比利时、阿联酋以及其他 29 个以上国家的公民。</div>
-        </div>
-        <div class="visa-item">
-            <div class="icon1 en b">Visa<br>Free</div>
-            <div class="text" data-i18n="visa.item2">区域免签计划——指定国家和旅行期限</div>
-            <div class="item-desc" data-i18n="visa.item2-desc">
-2025 年至 2026 年期间，来自拉丁美洲和海湾地区特定国家的游客可享受最多 30 天的免签停留。</div>
+    <div class="visabg"></div>
+    <div class="main">
+        <h4 data-i18n="visa.title">2026年中国签证指南</h4>
+        <div class="visaimg">
+            <img src="Images/visai1.png" alt="Visa">
         </div>
 
+        <div class="Rinfo">
+
+            <div class="tip" data-i18n="visa.tip"><span>中国签证要求及入境规定 2026</span></div>
+            <div class="info" data-i18n="visa.desc">
+                去中国需要签证吗？答案取决于您的护照类型、旅行目的和行程安排。<br>请先查看免签入境和过境选项。如果需要签证，请在申请前比较中国签证类型、申请要求、所需文件、费用和办理时间。
+            </div>
+            <div class="visainfo">
+                <div class="visa-item">
+                    <div class="icon en b">10</div>
+                    <div class="text" data-i18n="visa.item1">10天免签过境——最适合短期访问和多城市中转。</div>
+                    <div class="item-desc" data-i18n="visa.item1-desc">适用于来自美国、英国、加拿大和 50
+                        多个其他国家的旅客——非常适合经北京、上海、广州或深圳转机的旅客。</div>
+                </div>
+                <div class="visa-item">
+                    <div class="icon en b">30</div>
+                    <div class="text" data-i18n="visa.item2">30天免签入境——非常适合经典的中国行程</div>
+                    <div class="item-desc" data-i18n="visa.item2-desc">
+                        适用于意大利、澳大利亚、西班牙、德国、法国、新西兰、比利时、阿联酋以及其他 29 个以上国家的公民。</div>
+                </div>
+                <div class="visa-item">
+                    <div class="icon1 en b">Visa<br>Free</div>
+                    <div class="text" data-i18n="visa.item3">区域免签计划——指定国家和旅行期限</div>
+                    <div class="item-desc" data-i18n="visa.item3-desc">
+                        2025 年至 2026 年期间，来自拉丁美洲和海湾地区特定国家的游客可享受最多 30 天的免签停留。</div>
+                </div>
+
+
+
+            </div>
+            <div class="more">
+                <a data-i18n="visa.btn1">我需要签证码？</a>
+                <a data-i18n="visa.btn2">怎么申请中国签证</a>
+            </div>
+            <div class="tipinfo">
+                <span><i class="iconfont"></i><span data-i18n="visa.tag1">2026年最新新戏</span></span>
+                <span><i class="iconfont"></i><span data-i18n="visa.tag2">免签过境</span></span>
+                <span><i class="iconfont"></i><span data-i18n="visa.tag3">要求\文件\流程\费用</span></span>
+                <div class="" data-i18n="visa.lastcheck">上次审核时间：2026 年 1 月 — 政策可能会有所变更</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="videoBox">
+        <div class="mpd1"><img src="Images/mPd1.png" alt="GoGoToChina Video"></div>
+        <div class="main">
+            <h4 data-i18n="video.title">我们的旅行视频</h4>
+            <h6 data-i18n="video.subtitle">由中国当地专业旅行家精心打造的专属私人路线。</h6>
+            <!-- <iframe width="320" height="568" frameborder="0" src="https://open.douyin.com/player/video?vid=7703113624969055528&autoplay=0" referrerpolicy="unsafe-url" allowfullscreen></iframe> -->
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="javascript:;" class="video-play-btn" data-vid="7703113624969055528">
+                            <div class="videoimg"
+                                style="background: url(video/ck1-fm.jpg) center center no-repeat;background-size: cover;">
+                                <i class="iconfont">&#xee35;</i>
+
+
+                            </div>
+                            <h6 class="videotitle" data-i18n="video.vt1">武隆喀斯特国家地质公园一日旅行武隆喀斯特国家地质公园一日旅行</h6>
+                            <div class="videotime">
+                                <span data-i18n="video.time1">8小时</span>
+                                <span data-i18n="video.time2">可接送</span>
+                                <span data-i18n="video.time3">私人定制</span>
+                            </div>
+                            <div class="dsp" data-i18n="video.dsp">重庆武隆喀斯特私人一日游 | 三座天然桥 + 龙水峡地缝/仙女山（2-6 人，英语导游或司机兼导游）</div>
+
+                        </a>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="videoimg"
+                                style="background: url(video/ck1-fm.jpg) center center no-repeat;background-size: cover;">
+                                <i class="iconfont">&#xee35;</i>
+
+
+                            </div>
+                            <h6 class="videotitle" data-i18n="video.vt2">武隆喀斯特国家地质公园一日旅行武隆喀斯特国家地质公园一日旅行</h6>
+                            <div class="videotime">
+                                <span data-i18n="video.time1">8小时</span>
+                                <span data-i18n="video.time2">可接送</span>
+                                <span data-i18n="video.time3">私人定制</span>
+                            </div>
+                            <div class="dsp" data-i18n="video.dsp">重庆武隆喀斯特私人一日游 | 三座天然桥 + 龙水峡地缝/仙女山（2-6 人，英语导游或司机兼导游）</div>
+
+                        </a>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="videoimg"
+                                style="background: url(video/ck1-fm.jpg) center center no-repeat;background-size: cover;">
+                                <i class="iconfont">&#xee35;</i>
+
+
+                            </div>
+                            <h6 class="videotitle" data-i18n="video.vt3">武隆喀斯特国家地质公园一日旅行武隆喀斯特国家地质公园一日旅行</h6>
+                            <div class="videotime">
+                                <span data-i18n="video.time1">8小时</span>
+                                <span data-i18n="video.time2">可接送</span>
+                                <span data-i18n="video.time3">私人定制</span>
+                            </div>
+                            <div class="dsp" data-i18n="video.dsp">重庆武隆喀斯特私人一日游 | 三座天然桥 + 龙水峡地缝/仙女山（2-6 人，英语导游或司机兼导游）</div>
+
+                        </a>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="videoimg"
+                                style="background: url(video/ck1-fm.jpg) center center no-repeat;background-size: cover;">
+                                <i class="iconfont">&#xee35;</i>
+
+
+                            </div>
+                            <h6 class="videotitle" data-i18n="video.vt4">武隆喀斯特国家地质公园一日旅行武隆喀斯特国家地质公园一日旅行</h6>
+                            <div class="videotime">
+                                <span data-i18n="video.time1">8小时</span>
+                                <span data-i18n="video.time2">可接送</span>
+                                <span data-i18n="video.time3">私人定制</span>
+                            </div>
+                            <div class="dsp" data-i18n="video.dsp">重庆武隆喀斯特私人一日游 | 三座天然桥 + 龙水峡地缝/仙女山（2-6 人，英语导游或司机兼导游）</div>
+
+                        </a>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="videoimg"
+                                style="background: url(video/ck1-fm.jpg) center center no-repeat;background-size: cover;">
+                                <i class="iconfont">&#xee35;</i>
+
+
+                            </div>
+                            <h6 class="videotitle" data-i18n="video.vt5">武隆喀斯特国家地质公园一日旅行武隆喀斯特国家地质公园一日旅行</h6>
+                            <div class="videotime">
+                                <span data-i18n="video.time1">8小时</span>
+                                <span data-i18n="video.time2">可接送</span>
+                                <span data-i18n="video.time3">私人定制</span>
+                            </div>
+                            <div class="dsp" data-i18n="video.dsp">重庆武隆喀斯特私人一日游 | 三座天然桥 + 龙水峡地缝/仙女山（2-6 人，英语导游或司机兼导游）</div>
+
+                        </a>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="videoimg"
+                                style="background: url(video/ck1-fm.jpg) center center no-repeat;background-size: cover;">
+                                <i class="iconfont">&#xee35;</i>
+
+
+                            </div>
+                            <h6 class="videotitle" data-i18n="video.vt6">武隆喀斯特国家地质公园一日旅行武隆喀斯特国家地质公园一日旅行</h6>
+                            <div class="videotime">
+                                <span data-i18n="video.time1">8小时</span>
+                                <span data-i18n="video.time2">可接送</span>
+                                <span data-i18n="video.time3">私人定制</span>
+                            </div>
+                            <div class="dsp" data-i18n="video.dsp">重庆武隆喀斯特私人一日游 | 三座天然桥 + 龙水峡地缝/仙女山（2-6 人，英语导游或司机兼导游）</div>
+
+                        </a>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="videoimg"
+                                style="background: url(video/ck1-fm.jpg) center center no-repeat;background-size: cover;">
+                                <i class="iconfont">&#xee35;</i>
+
+
+                            </div>
+                            <h6 class="videotitle" data-i18n="video.vt7">武隆喀斯特国家地质公园一日旅行武隆喀斯特国家地质公园一日旅行</h6>
+                            <div class="videotime">
+                                <span data-i18n="video.time1">8小时</span>
+                                <span data-i18n="video.time2">可接送</span>
+                                <span data-i18n="video.time3">私人定制</span>
+                            </div>
+                            <div class="dsp" data-i18n="video.dsp">重庆武隆喀斯特私人一日游 | 三座天然桥 + 龙水峡地缝/仙女山（2-6 人，英语导游或司机兼导游）</div>
+
+                        </a>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="videoimg"
+                                style="background: url(video/ck1-fm.jpg) center center no-repeat;background-size: cover;">
+                                <i class="iconfont">&#xee35;</i>
+
+
+                            </div>
+                            <h6 class="videotitle" data-i18n="video.vt8">武隆喀斯特国家地质公园一日旅行武隆喀斯特国家地质公园一日旅行</h6>
+                            <div class="videotime">
+                                <span data-i18n="video.time1">8小时</span>
+                                <span data-i18n="video.time2">可接送</span>
+                                <span data-i18n="video.time3">私人定制</span>
+                            </div>
+                            <div class="dsp" data-i18n="video.dsp">重庆武隆喀斯特私人一日游 | 三座天然桥 + 龙水峡地缝/仙女山（2-6 人，英语导游或司机兼导游）</div>
+
+                        </a>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="videoimg"
+                                style="background: url(video/ck1-fm.jpg) center center no-repeat;background-size: cover;">
+                                <i class="iconfont">&#xee35;</i>
+
+
+                            </div>
+                            <h6 class="videotitle" data-i18n="video.vt9">武隆喀斯特国家地质公园一日旅行武隆喀斯特国家地质公园一日旅行</h6>
+                            <div class="videotime">
+                                <span data-i18n="video.time1">8小时</span>
+                                <span data-i18n="video.time2">可接送</span>
+                                <span data-i18n="video.time3">私人定制</span>
+                            </div>
+                            <div class="dsp" data-i18n="video.dsp">重庆武隆喀斯特私人一日游 | 三座天然桥 + 龙水峡地缝/仙女山（2-6 人，英语导游或司机兼导游）</div>
+
+                        </a>
+
+                    </div>
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
 
 
     </div>
-    <div class="more">
-        <a data-i18n="visa.btn1">我需要签证码？</a>
-        <a data-i18n="visa.btn2">怎么申请中国签证</a>
-    </div>
-    <div class="tipinfo">
-        <span><i class="iconfont"></i><span data-i18n="visa.tag1">2026年最新新戏</span></span>
-        <span><i class="iconfont"></i><span data-i18n="visa.tag2">免签过境</span></span>
-        <span><i class="iconfont"></i><span data-i18n="visa.tag3">要求\文件\流程\费用</span></span>
-        <div class="">上次审核时间：2026 年 1 月 — 政策可能会有所变更</div>
+
+<div class="GochinaBox">
+    <div class="mpd2"><img src="Images/mPd2.png" alt="GoGoToChina Trip"></div>
+    <div class="main">
+        <h4 class="title" data-i18n="china.title">第一次去<span class="oy6">中国</span></h4>
+        <h6 data-i18n="china.subtitle">规划您的首次中国之旅，我们将为您提供清晰的建议，包括去哪里、<br>停留多久、何时游览、如何在主要城市之间旅行以及出发前需要准备什么。</h6>
+
+        <div class="info">
+            <div class="tip guihua">
+                <div class="tpimg"><img src="Images/ctp1.jpg"></div>
+                <div class="tipinfo">
+                    <div class="tiptitle" data-i18n="china.card1.tag">一个简单的旅行规划</div>
+                    <h4 class="s1title" data-i18n="china.card1.title">如何规划你的第一次中国之旅</h4>
+                    <h6 class="stitle" data-i18n="china.card1.desc">在预订各个景点之前，请先确定旅行季节、行程时长和路线。这六个步骤将帮助您制定切实可行的中国旅行计划，并为您的首次中国之旅准备好必需品。</h6>
+                    <div class="morenum">❶ ❷ ❸ ❹ ❺ ❻</div>
+                </div>
+            </div>
+            <div class="tip zhunbei">
+                <div class="tpimg"><img src="Images/ctp3.jpg"></div>
+                <div class="tipinfo">
+                    <div class="tiptitle" data-i18n="china.card2.tag">中国旅行实用准备</div>
+                    <h4 class="s1title" data-i18n="china.card2.title">首次中国之旅前需要准备什么</h4>
+                    <h6 class="stitle" data-i18n="china.card2.desc">一旦确定了出行日期和路线，请准备好入境文件、预订信息、支付方式以及能让您在中国的旅行更轻松的数字工具。</h6>
+                    <div class="morenum">❶ ❷ ❸ ❹ ❺</div>
+                </div>
+            </div>
+            <div class="tip jiaotong">
+                <div class="tpimg"><img src="Images/ctp2.jpg"></div>
+                <div class="tipinfo">
+                    <div class="tiptitle" data-i18n="china.card3.tag">火车、飞机和城市交通</div>
+                    <h4 class="s1title" data-i18n="china.card3.title">如何在中国旅行</h4>
+                    <h6 class="stitle" data-i18n="china.card3.desc">中国各大城市之间通过高铁、国内航班和四通八达的公共交通系统连接。选择出行方式时，应考虑全程（从家到目的地）所需时间，而不仅仅是预定的旅行时间。</h6>
+                    <div class="morenum">❶ ❷ ❸</div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <div class="tripBox">
-    <h4 data-i18n="trip.title">中国顶级旅游线路</h4>
-    <h6 data-i18n="trip.subtitle">由中国当地专业旅行家精心打造的专属私人路线。</h6>
-    <div class="tripinfo"></div>
-</div>
+    <div class="main">  
+        <div class="mpd4"><img src="images/mPd4.png"></div>
+        <h4 data-i18n="trip.title">2026年游览中国的最佳时间</h4>
+        <h6 data-i18n="trip.subtitle">中国一年四季都适合旅游，但时机选择至关重要。夏季炎热潮湿多雨，游客众多；<br>而冬季则更适合欣赏雪景、泡温泉、参加哈尔滨冰雪节以及游览中国南方。</h6>
 
-<div class="monthBox">
-    <h4 data-i18n="month.title">2026年游览中国的最佳时间</h4>
-    <div class="info" data-i18n="month.desc">
-        中国地域辽阔，一年四季、每个月份都有适合游览的目的地。
-
-春季（4–5 月）与秋季（9–10 月）是全国范围内最受欢迎的旅行时段。气候温润舒适，非常适合打卡经典地标：长城、北京故宫、西安、桂林、张家界、九寨沟国家公园，以及长江游船。
-
-夏季炎热多雨、游客较多，但很适合前往山间避暑。
-冬季可以观赏雪景、泡温泉，打卡哈尔滨冰雪节；也可以去往中国南方，享受温暖冬日。
-
-出行请留意国内长假。春节与国庆黄金周期间，全国景点人流量巨大，酒店涨价、交通拥挤。偏爱安静旅途的游客建议避开这两个时段。
-
-这份指南结合天气、客流、旅行成本与分季节推荐线路，帮你挑选最合适的中国旅行时间。
-    </div>
-    <div class="weatherinfo">
-        <div class="city"></div>
+        <div class="tripinfo main">
+            <div class="trip-item">
+                <div class="bg1">春</div>
+                <div class="sentitle" data-i18n="trip.season1">春</div>
+                <div class="dm" data-i18n="trip.time1">三月至五月</div>
+                <div class="seninfo" data-i18n="trip.desc1">
+                    春天是游览中国的最佳时节之一。<br>气温开始回升，百花盛开，中国北方、中部和南方的气候普遍舒适宜人。<br>四月和五月尤其适合户外活动、城市观光和经典的中国之旅。<br>长城、故宫、桂林、长江和云南省都是绝佳的选择。<br><br>最适合鲜花盛开，天气宜人，游客络绎不绝，经典旅游线路<br>最佳目的地：北京、西安、桂林、云南、长江
+                </div>
+            </div>
+            <div class="trip-item">
+                <div class="bg1">夏</div>
+                <div class="sentitle" data-i18n="trip.season2">夏</div>
+                <div class="dm" data-i18n="trip.time2">六月至八月</div>
+                <div class="seninfo" data-i18n="trip.desc2">
+                    中国许多地区夏季炎热、潮湿、多雨，且交通繁忙。<br>7月通常是最热的月份之一，主要城市的气温经常在30摄氏度左右或更高。<br>然而，夏季是前往山区和高海拔地区的绝佳时节。西藏、青海、内蒙古、九寨沟和川西等地气候凉爽，景色壮丽。<br><br>最适合山脉、草原、家庭度假、西藏旅行<br>最佳目的地：西藏、九寨沟、内蒙古、青海、张家界
+                </div>
+            </div>
+            <div class="trip-item">
+                <div class="bg1">秋</div>
+                <div class="sentitle" data-i18n="trip.season3">秋</div>
+                <div class="dm" data-i18n="trip.time3">九月至十一月</div>
+                <div class="seninfo" data-i18n="trip.desc3">
+                    秋季是游览中国的最佳季节。<br>天气凉爽，天空晴朗，降雨量较少，许多地方的景色也变得色彩斑斓。<br>是游览北京、西安、张家界、九寨沟、桂林和云南的理想时节。<br>十一月也是不错的选择，游客较少，价格也更优惠，尤其是在中国南方地区。尽量避开十月的第一周，因为那是国庆黄金周。<br><br>最适合晴朗的天空、秋天的色彩、摄影、舒适的观光<br>最佳目的地：北京、长城、九寨沟、张家界、云南
+                </div>
+            </div>
+            <div class="trip-item">
+                <div class="bg1">冬</div>
+                <div class="sentitle" data-i18n="trip.season4">冬</div>
+                <div class="dm" data-i18n="trip.time4">十二月至二月</div>
+                <div class="seninfo" data-i18n="trip.desc4">
+                    中国北方冬季寒冷，但南方许多地区冬季温和。<br>一月份，中国北方气温可降至零下10摄氏度以下，尤其是在哈尔滨和内蒙古等地。<br>冬季是游览哈尔滨冰雪节、体验雪节、泡温泉和进行经济型旅行的最佳时节。中国南方、云南和海南等地气候较为温和，是冬季旅行的理想选择。<br><br>最适合哈尔滨冰雪节，雪景优美，价格较低，游客较少<br>最佳目的地哈尔滨、北京、云南、海南、中国南方
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <div class="welcomeBox">
-    <h4 data-i18n="welcome.title">为什么选择 GoGoToChina？</h4>
-    <div class="info" data-i18n="welcome.desc">
-        想要体验地道的中国私人旅行？GoGoToChina 是您可以托付的本地地接。每一段行程都为您专属打造，出行选择灵活，配套专人专业服务。本地导游深耕熟悉目的地。成千上万海外游客选择我们，开启省心、高品质的中国探索之旅。
+    <div class="main">
+        <h4 data-i18n="welcome.title">为什么选择 <b class="en r">GoGoTo<b class="oy6 b">China</b></b>？</h4>
+        <div class="info" data-i18n="welcome.desc">
+            想要体验地道的中国私人旅行？GoGoToChina 是您可以托付的本地地接。每一段行程都为您专属打造，出行选择灵活，配套专人专业服务。<br>本地导游深耕熟悉目的地。成千上万海外游客选择我们，开启省心、高品质的中国探索之旅。
+        </div>
+        <div class="winfo">
+            <div class="witem">
+                <i class="iconfont">&#xe66d;</i>
+                <div data-i18n="welcome.item1">
+                    <h6>定制您的旅程</h6>根据您的兴趣、节奏和旅行方式量身定制的100%私人中国行程——全程专家指导。
+                </div>
+            </div>
+            <div class="witem">
+                <i class="iconfont">&#xe63d;</i>
+                <div data-i18n="welcome.item2">
+                    <h6>按您的意愿旅行</h6>乘坐私人专车，由司机和导游全程陪同，您可以按照自己的节奏旅行——随时调整行程，享受完全的自由。
+                </div>
+            </div>
+            <div class="witem">
+                <i class="iconfont">&#xe642;</i>
+                <div data-i18n="welcome.item3">
+                    <h6>满怀信心地旅行</h6>一流的当地导游、可靠的服务和全天候支持，确保您拥有顺畅而难忘的中国之旅。
+                </div>
+            </div>
+            <div class="witem">
+                <i class="iconfont">&#xe747;</i>
+                <div data-i18n="welcome.item4">
+                    <h6>玩出你的中国故事</h6>沉浸于中国文化、美食和传统之中——发现那些将伴随你一生的有意义的体验。
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <footer>
-    <div class="main">    <div class="txtlogo"><h4 class="title en b">GoGoToChina</h4></div>
-
-
-
-
-
-
-    <div class="footer-info">
-        <div class="logo"><img src="Images/Logo.png" alt="GoGoToChina Logo"></div>
+    <div class="main">
+        <div class="mpd3"><img src="Images/mPd3.png" alt="GoGoToChina"></div>
         <div class="info" data-i18n="footer.desc">
-            GoGoToChina 是东方国际旅行社旗下的中国私人旅游品牌。我们为国际旅行者量身定制中国之旅，包括家庭旅行、文化之旅、免签行程和私人定制旅游。
+            GoGoToChina 是东方国际旅行社旗下的中国私人旅游品牌。<br>我们为国际旅行者量身定制中国之旅，包括家庭旅行、文化之旅、免签行程和私人定制旅游。
         </div>
-        </div></div>
-
+        <div class="txtlogo">
+            <h4 class="title en r" id="fitFooterTitle" data-i18n="footer.title">GOGOTO<span class="oy6 b">CHINA</span></h4>
+        </div>
+        <div class="footer-info">
+            <div class="logo"><img src="Images/Logo.png" alt="GoGoToChina Logo"></div>
+            <div class="footer-container r">
+                <div class="copyright" data-i18n="footer.copyright">© 2026 GoGoToChina.com. All rights reserved.</div>
+                <div class="tech-support" data-i18n="footer.support">Technical Support by <a href="https://onerain.ltd" target="_blank" class="oy6">OneRain.Ltd</a></div>
+            </div>
+        </div>
+    </div>
 </footer>
 
-<!-- ★ 全屏 Loading 遮罩 -->
 <div class="loading-mask" id="loadingMask">
     <div class="loading-inner">
+        <img src="Images/Logo.png" class="loading-logo" alt="Loading">
         <div class="spinner"></div>
-        <div class="loading-text">Loading...</div>
     </div>
 </div>
 
-<!-- 禁用 JS 兜底 -->
+<div class="video-modal" id="videoModal">
+    <div class="modal-bg" id="modalBg"></div>
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="iframe-wrapper" id="iframeWrapper"></div>
+    </div>
+</div>
+
+<script src="js/swiper-bundle.min.js"></script>
 <noscript>
-    <style>
-        .loading-mask { display: none !important; }
-        body.is-loading { opacity: 1 !important; }
-    </style>
+    <style>.loading-mask { display: none !important; } body.is-loading { opacity: 1 !important; }</style>
 </noscript>
-<script>document.addEventListener('DOMContentLoaded', fitTitle);
-window.addEventListener('load', fitTitle);</script>
+
 <script>
-    
-(function () {
-    var currentLang = '';
-    var translations = {};
-    var loadingMask = document.getElementById('loadingMask');
-    var langDropdown = document.getElementById('langDropdown');
-    var langBtn = document.getElementById('langBtn');
-    var MIN_LOADING_TIME = 600;
-    var startTime = Date.now();
+document.addEventListener('DOMContentLoaded', function () {
 
-    // ============ 判断用户语言 ============
-    function detectLang() {
-        try {
-            var saved = localStorage.getItem('preferredLang');
-            if (saved) return saved;
-        } catch (e) {}
-        var nav = (navigator.language || 'zh').toLowerCase();
-        if (nav.startsWith('ja')) return 'ja';
-        if (nav.startsWith('zh')) return 'zh';
-        return 'en';
-    }
+    /* ========== 1. 自动撑满字体的优化 ========== */
+    (function () {
+        var el = document.getElementById('fitFooterTitle');
+        if (!el) return;
+        function fitText() {
+            var parentW = el.parentNode.clientWidth;
+            el.style.fontSize = '100px'; 
+            var naturalW = el.scrollWidth;
+            if (naturalW > 0) {
+                el.style.fontSize = (100 * parentW / naturalW) + 'px';
+            }
+        }
+        window.addEventListener('load', fitText);
+        window.addEventListener('resize', fitText);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitText);
+        window.addEventListener('langChanged', fitText);
+    })();
 
-    // ============ 加载语言 JSON ============
-    function loadLang(lang) {
-        return new Promise(function (resolve, reject) {
-            if (translations[lang]) return resolve(translations[lang]);
-            fetch('lang/' + lang + '.json')
-                .then(function (res) {
-                    if (!res.ok) throw new Error('加载失败：' + lang);
-                    return res.json();
-                })
-                .then(function (data) {
-                    translations[lang] = data;
-                    resolve(data);
-                })
-                .catch(reject);
-        });
-    }
+    /* ========== 2. 导航栏滚动变色 ========== */
+    (function () {
+        var header = document.querySelector('.home header');
+        if (!header) return;
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+            if (!ticking) {
+                window.requestAnimationFrame(function () {
+                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    if (scrollTop > 50) header.classList.add('scrolled');
+                    else header.classList.remove('scrolled');
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+    })();
 
-    // ============ 应用翻译 ============
-    function applyTranslations(data) {
-        document.querySelectorAll('[data-i18n]').forEach(function (el) {
-            var key = el.getAttribute('data-i18n');
-            var text = data[key];
-            if (text !== undefined) el.innerHTML = text;
-        });
+    /* ========== 3. 多语言 i18n 系统 ========== */
+    (function () {
+        var currentLang = '';
+        var translations = {};
+        var loadingMask = document.getElementById('loadingMask');
+        var langDropdown = document.getElementById('langDropdown');
+        var langBtn = document.getElementById('langBtn');
+        var MIN_LOADING_TIME = 1000;
+        var startTime = Date.now();
 
-        // 更新当前语言按钮里的名字
-        var langNameEl = document.querySelector('.lang-current [data-i18n="lang.name"]');
-        if (langNameEl && data['lang.name']) {
-            langNameEl.textContent = data['lang.name'];
+        function detectLang() {
+            try {
+                var saved = localStorage.getItem('preferredLang');
+                if (saved) return saved;
+            } catch (e) {}
+            var nav = (navigator.language || 'zh').toLowerCase();
+            if (nav.startsWith('ja')) return 'ja';
+            if (nav.startsWith('zh')) return 'zh';
+            return 'en';
         }
 
-        document.documentElement.setAttribute('lang', currentLang);
-    }
-
-    // ============ 淡出 loading ============
-    function finishLoading() {
-        var elapsed = Date.now() - startTime;
-        var delay = Math.max(0, MIN_LOADING_TIME - elapsed);
-        setTimeout(function () {
-            document.body.classList.remove('is-loading');
-            loadingMask.classList.add('hide');
-        }, delay);
-    }
-
-    // ============ 切换语言 ============
-    function setLanguage(lang, isInitial) {
-        if (lang === currentLang && !isInitial) return;
-        if (!isInitial) loadingMask.classList.remove('hide');
-
-        loadLang(lang).then(function (data) {
-            currentLang = lang;
-            applyTranslations(data);
-
-            // 菜单高亮
-            document.querySelectorAll('.lang-menu button').forEach(function (btn) {
-                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        function loadLang(lang) {
+            return new Promise(function (resolve, reject) {
+                if (translations[lang]) return resolve(translations[lang]);
+                fetch('lang/' + lang + '.json')
+                    .then(function (res) {
+                        if (!res.ok) throw new Error('加载失败');
+                        return res.json();
+                    })
+                    .then(function (data) {
+                        translations[lang] = data;
+                        resolve(data);
+                    })
+                    .catch(reject);
             });
+        }
 
-            try { localStorage.setItem('preferredLang', lang); } catch (e) {}
+        function applyTranslations(data) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                var text = data[key];
+                if (text !== undefined) el.innerHTML = text;
+            });
+            var langNameEl = document.querySelector('.lang-current [data-i18n="lang.name"]');
+            if (langNameEl && data['lang.name']) langNameEl.textContent = data['lang.name'];
+            document.documentElement.setAttribute('lang', currentLang);
+            window.dispatchEvent(new Event('langChanged'));
+        }
 
-            if (isInitial) finishLoading();
-            else loadingMask.classList.add('hide');
-        }).catch(function (err) {
-            console.error(err);
-            if (isInitial) finishLoading();
-            else loadingMask.classList.add('hide');
-        });
-    }
-
-    // ============ 语言下拉交互 ============
-    langBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        langDropdown.classList.toggle('open');
-    });
-
-    document.querySelectorAll('.lang-menu button').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            setLanguage(this.getAttribute('data-lang'), false);
-            langDropdown.classList.remove('open');
-        });
-    });
-
-    document.addEventListener('click', function () {
-        langDropdown.classList.remove('open');
-    });
-
-    // ============ 初始化 ============
-    setLanguage(detectLang(), true);
-
-})();
-// ============ 打字机效果（打完停3秒，消失停1秒） ============
-(function () {
-    var typeEl = document.getElementById('typingTitle');
-    if (!typeEl) return;
-
-    var timer = null;
-    var fullText = 'GoGoToChina';
-    var bStartIndex = 6;
-
-    function startTyping() {
-        clearTimeout(timer);
-
-        // 1. 瞬间完全透明（让用户看不到内部清理过程）
-        typeEl.style.opacity = '0';
-
-        // 2. 透明状态下，清空并重置 DOM
-        setTimeout(function () {
-            typeEl.innerHTML = ''; // 彻底清空
-
-            var textBefore = document.createTextNode('');
-            var bTag = document.createElement('b');
-            typeEl.appendChild(textBefore);
-            typeEl.appendChild(bTag);
-
-            var index = 0;
-            var isPausing = false;
-
-            // 3. 开始逐个打字
-            function type() {
-                if (isPausing) return;
-
-                if (index < fullText.length) {
-                    var char = fullText[index];
-
-                    if (index < bStartIndex) {
-                        textBefore.textContent += char;
-                    } else {
-                        bTag.textContent += char;
-                    }
-
-                    index++;
-                    timer = setTimeout(type, 150); // 打字速度 150ms
-                } else {
-                    // 4. 字母打完，停 3 秒
-                    isPausing = true;
-                    timer = setTimeout(function () {
-                        // 这里什么也不做，让它进入下一次 startTyping 循环
-                        startTyping();
-                    }, 3000); 
-                }
-            }
-
-            // ★ 5. 重置完了，保持透明，等待 1 秒后再显示并开始打字
+        function finishLoading() {
+            var elapsed = Date.now() - startTime;
+            var delay = Math.max(0, MIN_LOADING_TIME - elapsed);
             setTimeout(function () {
-                typeEl.style.opacity = '1'; // 恢复显示
-                type(); // 开始出字
-            }, 1000); 
+                document.body.classList.remove('is-loading');
+                if(loadingMask) loadingMask.classList.add('hide');
+            }, delay);
+        }
 
-        }, 50); // 用 50ms 的缓冲让透明生效
-    }
+        function setLanguage(lang, isInitial) {
+            if (lang === currentLang && !isInitial) return;
+            if (!isInitial && loadingMask) loadingMask.classList.remove('hide');
 
-    // 首次页面加载，先等 1 秒再开始
-    setTimeout(startTyping, 1000);
+            loadLang(lang).then(function (data) {
+                currentLang = lang;
+                applyTranslations(data);
+                document.querySelectorAll('.lang-menu button').forEach(function (btn) {
+                    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+                });
+                try { localStorage.setItem('preferredLang', lang); } catch (e) {}
+                if (isInitial) finishLoading();
+                else if (loadingMask) loadingMask.classList.add('hide');
+            }).catch(function (err) {
+                console.error(err);
+                if (isInitial) finishLoading();
+                else if (loadingMask) loadingMask.classList.add('hide');
+            });
+        }
 
-})();
+        if (langBtn && langDropdown) {
+            langBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                langDropdown.classList.toggle('open');
+            });
+            document.addEventListener('click', function () { langDropdown.classList.remove('open'); });
+        }
+        document.querySelectorAll('.lang-menu button').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                setLanguage(this.getAttribute('data-lang'), false);
+                if (langDropdown) langDropdown.classList.remove('open');
+            });
+        });
+        setLanguage(detectLang(), true);
+    })();
+
+    /* ========== 4. 打字机效果 ========== */
+    (function () {
+        var typeEl = document.getElementById('typingTitle');
+        if (!typeEl) return;
+        var timer = null;
+        var fullText = 'GoGoToChina';
+        var bStartIndex = 6;
+
+        function startTyping() {
+            clearTimeout(timer);
+            typeEl.style.opacity = '0';
+            setTimeout(function () {
+                typeEl.innerHTML = '';
+                var textBefore = document.createTextNode('');
+                var bTag = document.createElement('b');
+                typeEl.appendChild(textBefore);
+                typeEl.appendChild(bTag);
+
+                var index = 0;
+                var isPausing = false;
+                function type() {
+                    if (isPausing) return;
+                    if (index < fullText.length) {
+                        var char = fullText[index];
+                        if (index < bStartIndex) textBefore.textContent += char;
+                        else bTag.textContent += char;
+                        index++;
+                        timer = setTimeout(type, 150);
+                    } else {
+                        isPausing = true;
+                        timer = setTimeout(startTyping, 5000);
+                    }
+                }
+                setTimeout(function () {
+                    typeEl.style.opacity = '1';
+                    type();
+                }, 1000);
+            }, 50);
+        }
+        setTimeout(startTyping, 1000);
+    })();
+
+    /* ========== 5. MPD 弹窗入场动画 ========== */
+    (function () {
+        var mpdElement = document.querySelector('.mpd');
+        if (!mpdElement) return;
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                mpdElement.classList.add('step-1');
+                setTimeout(function () {
+                    mpdElement.classList.add('step-2');
+                    setTimeout(function () {
+                        mpdElement.classList.add('step-3');
+                    }, 200);
+                }, 300);
+            }, 500);
+        });
+    })();
+
+    /* ========== 6. 视频弹窗控制 ========== */
+    (function () {
+        var modal = document.getElementById('videoModal');
+        var modalBg = document.getElementById('modalBg');
+        var modalClose = document.getElementById('modalClose');
+        var iframeWrapper = document.getElementById('iframeWrapper');
+        var playBtns = document.querySelectorAll('.video-play-btn');
+        if (!modal) return;
+
+        function openModal(vid) {
+            var iframe = document.createElement('iframe');
+            iframe.width = "100%";
+            iframe.height = "100%";
+            iframe.frameborder = "0";
+            iframe.src = "https://open.douyin.com/player/video?vid=" + vid + "&autoplay=1"; 
+            iframe.referrerPolicy = "unsafe-url";
+            iframe.allowFullscreen = true;
+            iframeWrapper.innerHTML = '';
+            iframeWrapper.appendChild(iframe);
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('open');
+            setTimeout(function() { iframeWrapper.innerHTML = ''; }, 300);
+            document.body.style.overflow = '';
+        }
+
+        playBtns.forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                var vid = this.getAttribute('data-vid');
+                if (vid) openModal(vid);
+            });
+        });
+
+        if (modalClose) modalClose.addEventListener('click', closeModal);
+        if (modalBg) modalBg.addEventListener('click', closeModal);
+        document.addEventListener('keydown', function(e) {
+            if(e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+        });
+    })();
+
+});
+
+/* 7. Swiper 横向滑动初始化 */
+if (typeof Swiper !== 'undefined') {
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoplay: { delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true },
+        pagination: { el: ".swiper-pagination", clickable: true },
+        breakpoints: {
+            640: { slidesPerView: 2, spaceBetween: 0 },
+            768: { slidesPerView: 4, spaceBetween: 0 },
+            1024: { slidesPerView: 5, spaceBetween: 0 },
+        },
+    });
+}
 </script>
-
 </body>
 </html>
