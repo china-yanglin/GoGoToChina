@@ -42,14 +42,56 @@
     </nav>
         <div class="logo"><img src="Images/Logo.png" alt="GoGoToChina Logo"></div>
         <div class="link">
-            <a href="#"><i class="iconfont">&#xea07;</i></a>
-            <a href="#"><i class="iconfont">&#xe653;</i></a>
-            <a href="#"><i class="iconfont">&#xe66c;</i></a>
-            <a href="#"><i class="iconfont">&#xe83b;</i></a>
+            <a href="https://wa.me/8618623040800" target="_blank"><i class="iconfont">&#xea07;</i></a>
+            <a href="https://www.instagram.com/gogotochina/" target="_blank"><i class="iconfont">&#xe653;</i></a>
+            <a href="https://www.tiktok.com/@gogotochina" target="_blank"><i class="iconfont">&#xe66c;</i></a>
+            <a href="https://www.facebook.com/profile.php?id=61594094159013" target="_blank"><i class="iconfont">&#xe83b;</i></a>
         </div>
     </div>
 </header>
+<!-- ★ 全新手机版专属 Header -->
+<header class="mobile-header" id="mobileHeader">
+    <div class="m-top">
+        <div class="logo"><img src="Images/Logo.png" alt="Logo"></div>
+        <div class="menu-btn" id="mobileMenuBtn">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+    
+    <!-- 手机版下拉菜单 -->
+    <div class="m-menu" id="mobileMenu">
+        <a data-i18n="nav.home">首页</a>
+        <a data-i18n="nav.chinaTrip">中国之旅</a>
+        <a data-i18n="nav.destinations">目的地</a>
+        <a data-i18n="nav.guides">旅游指南</a>
+        <a data-i18n="nav.bestTime">最佳时间</a>
+        <a data-i18n="nav.festivals">中国节日</a>
+        <a data-i18n="nav.about">关于我们</a>
+        
+        <!-- 社交图标 -->
+        <div class="m-social">
+            <a href="https://wa.me/8618623040800" target="_blank"><i class="iconfont">&#xea07;</i></a>
+            <a href="https://www.instagram.com/gogotochina/" target="_blank"><i class="iconfont">&#xe653;</i></a>
+            <a href="https://www.tiktok.com/@gogotochina" target="_blank"><i class="iconfont">&#xe66c;</i></a>
+            <a href="https://www.facebook.com/profile.php?id=61594094159013" target="_blank"><i class="iconfont">&#xe83b;</i></a>
+        </div>
 
+        <!-- 手机版语言切换 (简化版) -->
+        <div class="m-lang">
+            <select id="mobileLangSelect">
+                <option value="zh">中文</option>
+                <option value="ts">繁体</option>
+                <option value="en">English</option>
+                <option value="th">🇹🇭 ภาษาไทย</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="it">🇮🇹 Italiano</option>
+                <option value="de">🇩🇪 Deutsch</option>
+                <option value="ja">🇯🇵 日本語</option>
+            </select>
+        </div>
+    </div>
+</header>
 <div class="bannerBox">
     <video class="mainVbox-video" autoplay muted loop playsinline preload="auto" style="background: url('Video/index-v1.jpg') center center no-repeat; background-size: contain;">
         <source src="Video/DiscCN1.mp4" type="video/mp4">
@@ -328,8 +370,8 @@
     </div>
 
 <div class="GochinaBox">
-    <div class="mpd2"><img src="Images/mPd2.png" alt="GoGoToChina Trip"></div>
-    <div class="main">
+   
+    <div class="main"> <div class="mpd2"><img src="Images/mPd2.png" alt="GoGoToChina Trip"></div>
         <h4 class="title" data-i18n="china.title">第一次去<span class="oy6">中国</span></h4>
         <h6 data-i18n="china.subtitle">规划您的首次中国之旅，我们将为您提供清晰的建议，包括去哪里、<br>停留多久、何时游览、如何在主要城市之间旅行以及出发前需要准备什么。</h6>
 
@@ -367,7 +409,10 @@
 
 <div class="tripBox">
     <div class="main">  
-        <div class="mpd4"><img src="Images/mPd4.png"></div>
+<div class="mpd4">
+    <img src="images/mPd4.png" id="img1" style="opacity: 1;">
+    <img src="images/mPd4-1.png" id="img2" style="opacity: 0;">
+</div>
         <h4 data-i18n="trip.title">2026年游览中国的最佳时间</h4>
         <h6 data-i18n="trip.subtitle">中国一年四季都适合旅游，但时机选择至关重要。夏季炎热潮湿多雨，游客众多；<br>而冬季则更适合欣赏雪景、泡温泉、参加哈尔滨冰雪节以及游览中国南方。</h6>
 
@@ -445,6 +490,7 @@
 
 <footer>
     <div class="main">
+                <div class="mpd31"><img src="Images/mPd3-1.png" alt="GoGoToChina"></div>
         <div class="mpd3"><img src="Images/mPd3.png" alt="GoGoToChina"></div>
         <div class="info" data-i18n="footer.desc">
             GoGoToChina 是东方国际旅行社旗下的中国私人旅游品牌。<br>我们为国际旅行者量身定制中国之旅，包括家庭旅行、文化之旅、免签行程和私人定制旅游。
@@ -503,17 +549,30 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('langChanged', fitText);
     })();
 
-    /* ========== 2. 导航栏滚动变色 ========== */
+       /* ========== 2. 导航栏滚动变色 (PC + 手机) ========== */
     (function () {
-        var header = document.querySelector('.home header');
-        if (!header) return;
+        var pcHeader = document.querySelector('.home header:not(.mobile-header)');
+        var mobileHeader = document.querySelector('.mobile-header');
+        
         var ticking = false;
         window.addEventListener('scroll', function () {
             if (!ticking) {
                 window.requestAnimationFrame(function () {
                     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    if (scrollTop > 50) header.classList.add('scrolled');
-                    else header.classList.remove('scrolled');
+                    var isScrolled = scrollTop > 50;
+
+                    // 控制电脑版
+                    if (pcHeader) {
+                        if (isScrolled) pcHeader.classList.add('scrolled');
+                        else pcHeader.classList.remove('scrolled');
+                    }
+                    
+                    // 控制手机版
+                    if (mobileHeader) {
+                        if (isScrolled) mobileHeader.classList.add('scrolled');
+                        else mobileHeader.classList.remove('scrolled');
+                    }
+
                     ticking = false;
                 });
                 ticking = true;
@@ -734,6 +793,88 @@ if (typeof Swiper !== 'undefined') {
         },
     });
 }
+// ============ mpd4 图片 3 秒交叉渐隐轮播 ============
+(function () {
+    var img1 = document.getElementById('img1');
+    var img2 = document.getElementById('img2');
+    if (!img1 || !img2) return;
+
+    var images = [
+        "images/mPd4.png",
+        "images/mPd4-1.png",
+        "images/mPd4-2.png",
+        "images/mPd4-3.png"
+    ];
+    
+    var currentIndex = 0;
+    var isFirstActive = true; // 标记当前显示的是不是 img1
+
+    setInterval(function () {
+        // 算出下一张图的索引
+        var nextIndex = (currentIndex + 1) % images.length;
+        
+        if (isFirstActive) {
+            // 如果当前是 img1，把新图装进 img2，并让 img2 显现，img1 隐藏
+            img2.src = images[nextIndex];
+            img2.style.opacity = '1';
+            img1.style.opacity = '0';
+        } else {
+            // 反之亦然，把新图装进 img1，让 img1 显现，img2 隐藏
+            img1.src = images[nextIndex];
+            img1.style.opacity = '1';
+            img2.style.opacity = '0';
+        }
+
+        // 更新状态
+        currentIndex = nextIndex;
+        isFirstActive = !isFirstActive;
+
+    }, 3000); // 每 3 秒切换一次
+})();
+// ============ 全新手机版 Header 控制 ============
+(function() {
+    var mBtn = document.getElementById('mobileMenuBtn');
+    var mMenu = document.getElementById('mobileMenu');
+    var mLang = document.getElementById('mobileLangSelect');
+    
+    if (!mBtn || !mMenu) return;
+
+    // 菜单开关
+    mBtn.addEventListener('click', function() {
+        this.classList.toggle('open');
+        mMenu.classList.toggle('open');
+    });
+
+    // 点击菜单链接后关闭菜单
+    mMenu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            mBtn.classList.remove('open');
+            mMenu.classList.remove('open');
+        });
+    });
+
+    // 语言切换联动
+    if (mLang) {
+        mLang.addEventListener('change', function() {
+            var selectedLang = this.value;
+            // 调用你现有的 i18n 切换方法
+            // 假设你原有代码里是通过点击 .lang-menu button 来切换的，这里模拟触发
+            var targetBtn = document.querySelector('.lang-menu button[data-lang="' + selectedLang + '"]');
+            if (targetBtn) {
+                targetBtn.click(); // 触发原有的切换逻辑
+            }
+        });
+
+        // 监听原有的语言变化，同步下拉框的选中状态
+        window.addEventListener('langChanged', function() {
+            // 获取当前 HTML 的 lang 属性
+            var currentLang = document.documentElement.lang || 'zh';
+            if (mLang.value !== currentLang) {
+                mLang.value = currentLang;
+            }
+        });
+    }
+})();
 </script>
 </body>
 </html>
