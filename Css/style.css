@@ -210,6 +210,7 @@ a {
 .gy6 {
   color: #666;
 }
+.blue{color: #1d5198;}
 .red{color:#f00}
 .main{max-width:1400px; margin:0 auto;position: relative;width: auto;}
 .home header {
@@ -340,7 +341,7 @@ mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .8) 5%
 
 .home .serviceBox{padding: 100px 0 0 0;max-width: 1400px;margin: 0 auto;position: relative; }
 .home .serviceBox .logo{width: 400px; height: auto; }
-.home h4{font-size: 60px;color:#333;line-height: 60px;}
+.home h4{font-size: 60px;color:#1d5198;line-height: 60px;font-family:ORFont;}
 .home h6 {
     font-size: 20px;
     color: #666;
@@ -360,7 +361,7 @@ mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .8) 5%
     display: inline-block;position: absolute;
     top: -80px;
     left: -40px;
-    padding: 10px 40px;}
+    padding: 20px 40px;}
 
 .home .visaBox .visaimg{max-width:500px;position: absolute;top: 50px;right:0;z-index: 10;width: 36vw;}
 .home .visaBox .Rinfo{max-width:900px;padding-top: 40px;width: 60%;}
@@ -392,7 +393,7 @@ mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .8) 5%
 
 
 .home .videoBox h6{font-size: 20px;color:#999;margin:0 0 20px;font-weight: 400;transition: .3s;}
-.home .videoBox h6.videotitle{font-size:20px;line-height:20px;height:20px;overflow: hidden;color:#444;margin: 0;}
+.home .videoBox h6.videotitle{font-size:20px;line-height:20px;height:20px;overflow: hidden;color:#444;margin: 0;font-weight: 700;}
 
 
 .home .videoBox .videoimg {padding-top: 50%;margin:20px 0;
@@ -423,7 +424,7 @@ mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .8) 5%
     box-shadow: 0 0 20px rgba(255, 102, 0,.5);opacity: 1;
 }
 .home .videoBox a:hover .videoimg i{font-size:100px}
-.home .videoBox .swiper-slide{padding: 0 20px;}
+.home .videoBox .swiper-slide{padding: 0;}
 
 .home .GochinaBox{padding: 100px 0;position: relative;}
 .home .GochinaBox .mpd2 {
@@ -473,7 +474,7 @@ mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .8) 5%
 .home .GochinaBox .info .tip{width:33.33%;margin:0 ;position: relative;border-radius: 20px;overflow: hidden;background: #fff;
   box-shadow: 0 0 20px rgba(0,0,0,.1);text-align: right;border-bottom: 5px solid #f0f0f0;transition: .3s;}
 .home .GochinaBox .info .tip .morenum {font-size: 30px; color:#999; }
-.home .GochinaBox .info .tip  .tipinfo{position: relative;margin-top: -30px;padding:0 20px 20px;}
+.home .GochinaBox .info .tip  .tipinfo{position: relative;margin-top: -20px;padding:0 20px 20px;}
 .home .GochinaBox .info .tip .tiptitle{display:inline-block;background: #fff;padding: 5px 20px;font-size:14px;color:#1d5198;margin-right: -20px;}
 .home .GochinaBox .info .tip:hover{border-bottom: 5px solid #1d5198;background: #fffefa;box-shadow: 0 0 20px rgba(255,102,0,.4)}
 .home .GochinaBox .info .tip:hover .s1title{color:#1d5198}
@@ -567,8 +568,8 @@ mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .8) 5%
 
 .home .videoBox .videotime{margin:8px 0}
 .home .videoBox .videotime span{border-radius: 20px;line-height: 14px;margin-bottom: 2px;font-size: 12px;background: #1d5198;
-  color:#fff;padding:2px 5px;margin-right:2px;display: inline-block;}
-.home .videoBox .dsp{font-size: 14px;color:#666;line-height: 20px;height: 60px;overflow: hidden;margin: 0 0 8px 0;transition: .3s;}
+  color:#fff;padding:2px 5px 0px;margin-right:2px;display: inline-block;}
+.home .videoBox .dsp{font-size: 12px;color:#666;line-height: 20px;height: 60px;overflow: hidden;margin: 0 0 8px 0;transition: .3s;}
 .home .videoBox a:hover h6{color:#1d5198}
 .home .videoBox a:hover .dsp{color:#444}
 
@@ -706,7 +707,7 @@ footer .info{font-size: 16px;color:#999}
 .modal-content {
     position: relative;
     z-index: 2;
-    max-width: 324px; /* 适配竖屏视频 */
+    max-width: 340px; /* 适配竖屏视频 */
     background: #000;
     border-radius: 12px;
     overflow: hidden;
@@ -718,9 +719,9 @@ footer .info{font-size: 16px;color:#999}
     transform: scale(1);
 }
 .iframe-wrapper {
-    width: 324px;
-    height: 720px;
-    /* aspect-ratio: 9 / 16; 抖音通常是 9:16 竖屏 */
+    width: 340px;
+    height: auto;font-size: 0;text-align: center;
+    aspect-ratio: 9 / 16;
     position: relative;
 }
 .iframe-wrapper iframe {
@@ -798,52 +799,64 @@ footer .info{font-size: 16px;color:#999}
 }
 
     .mobile-header .m-top .logo {
-        width: 200px;left: 20px;top: 0;
+        width: 200px;left: 20px;top: 5px;
     }
     .mobile-header .m-top .logo img {
         width: 100%;
         display: block;
     }
 
-    /* 汉堡按钮 */
+ /* 汉堡按钮 */
     .mobile-header .menu-btn {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 5px;
         width: 30px;
-        height: 30px;position: absolute;
-        cursor: pointer;right: 20px;
+        height: 30px;
+        position: absolute;
+        cursor: pointer;
+        right: 20px;
     }
+
+    /* 默认顶部：白色线条 */
     .mobile-header .menu-btn span {
         display: block;
         width: 100%;
         height: 4px;
-        background: #333;
+        background: #fff; 
         transition: 0.3s;
     }
 
-    /* 点击后，汉堡变 X */
+    /* ★ 向下滚动（出现白底）后：线条变为 #444 */
+    .mobile-header.scrolled .menu-btn span {
+        background: #444;
+    }
+
+    /* 点击展开后：汉堡变 X，线条也是 #444 */
     .mobile-header .menu-btn.open span:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
+        background: #444;
     }
     .mobile-header .menu-btn.open span:nth-child(2) {
         opacity: 0;
     }
     .mobile-header .menu-btn.open span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
+        background: #444;
     }
 
     /* 下拉全屏菜单 */
     .mobile-header .m-menu {
         position: absolute;
-        top: 60px; /* 紧贴顶部条下方 */
+        top: 0; /* 紧贴顶部条下方 */
         left: 0;
+  
         width: 100%;
-        height: calc(100vh - 60px);
+        height: 100vh;
         background: #fff;
         padding: 20px;
-        display: flex;
+        display: flex;line-height: 40px;
         flex-direction: column;
         transform: translateY(-100%);
         opacity: 0;
@@ -854,7 +867,7 @@ footer .info{font-size: 16px;color:#999}
     }
 
     /* 菜单展开状态 */
-    .mobile-header .m-menu.open {
+    .mobile-header .m-menu.open {      padding-top: 80px;
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
@@ -876,13 +889,11 @@ footer .info{font-size: 16px;color:#999}
     .mobile-header .m-social {
         display: flex;
         gap: 20px;
-        margin-top: 30px;
-        padding-top: 20px;
-        border-top: 1px dashed #ddd;
+        padding-top: 10px;
     }
     .mobile-header .m-social a {
         color: #666;
-        font-size: 24px;
+        font-size: 30px;
     }
 
     /* 底部语言选择 */
@@ -902,50 +913,87 @@ footer .info{font-size: 16px;color:#999}
     }
 
 /* 手机样式 */
-.home h4{font-size: 3vh;}
+.mainVbox-video{height: 80vh;}
+.home h1.title{font-size: 80px;top: 300px;z-index: 100;}
+.home .mpd{min-width:auto;width: 200px;left: 35%;top:100px;}
+.home .bannerBox{padding: 0 20px;max-height: 550px;}
+.home h4.subtitle{font-size: 20px;top: 420px;z-index: 100;}
+.home .bannerBox .main{padding: 0;}
+.home .bannerBox .info{font-size: 14px;width: 100%;}
+.home .bannerBox .info a{font-size: 14px;}
+.home .serviceBox{padding: 100px 20px 0;}
+.home .serviceBox .logo{width: 60%;margin-bottom: 20px;}
+.home .serviceBox .more{display: block;padding-top: 30px;margin: 30px 0;}
+.home .serviceBox .more div{width: 100%;border-right: none;border-bottom: 1px dotted #e0e0e0;padding: 0;
+    padding-bottom: 10px;margin-bottom: 10px;}
+.home .visaBox .visabg{height: 200px;}
+.home .visaBox{padding-bottom: 150px;}
+.home .visaBox h4{left: -20px;line-height: 30px;top: -30px;}
+.home .visaBox .tip{margin-top: 20px;margin-bottom: 300px;}
+.home .visaBox .visaimg{width: 100%;top: 75px;}
+.home .visaBox .Rinfo {
+        padding-top:10px;
+    width: 100%;}
+    .home .visaBox .Rinfo .info{padding-bottom: 20px;border-bottom: 1px solid #e0e0e0;margin-bottom: 10px;}
+    .home .visaBox h4{padding: 10px 40px 0;}
+    .home .visaBox .tipinfo{font-size: 14px;line-height: 20px;}
+    .home .visaBox .visainfo .visa-item .icon{width: 70px;}
+      .home .visaBox .visainfo .visa-item {padding-left: 70px;padding-right: 20px;}
+    .home .visaBox .visainfo .visa-item .text{height: auto;font-size: 14px;line-height: 20px;}
+    .home .visaBox .visainfo .visa-item .item-desc{height: auto;font-size: 12px;line-height: 16px;}
+.home .videoBox .mpd1 {  width: 180px;
+        top: -146px;
+        left: 40%;}
+.home .videoBox{padding: 40px 0;}
+.home h4{font-size: 3vh;line-height: 30px;}
 .home h6{font-size: 14px;}
 .home .GochinaBox .mpd2 {
-    width: 140px;
+    width: 100px;
     position: absolute;
-    top: -150px;
+    top: -110px;
     left:5%;
 }
 @keyframes mpd2MoveFade {
     /* 0 秒：在 16% 位置，透明 */
     0% {
-        left: 6%;
+        left: 1%;
         opacity: 0;
     }
     /* 0.5 秒 (约 4.16%)：淡入完成 */
     4.16% {
-        left: 6.5%;
+        left: 1.5%;
         opacity: 1;
     }
     /* 9.5 秒 (约 79.16%)：一直移动到 25%，并且保持不透明 */
     79.16% {
-        left: 15%;
+        left: 10%;
         opacity: 1;
     }
     /* 10 秒 (约 83.33%)：到达 26% 位置，开始变透明 */
     83.33% {
-        left: 16%;
+        left: 11%;
         opacity: 0;
     }
     /* 10 秒到 12 秒之间（83.33% 到 100%）：保持隐藏状态，实现停 2 秒的效果 */
     100% {
-        left: 16%;
+        left: 11%;
         opacity: 0;
     }
 }
 .mpd4 {
-    width: 200px;
-    top: 120px;z-index: 1;
-    right: 5%;}
+    width: 190px;
+    top: 90px;z-index: 1;}
 .home .GochinaBox{padding: 40px 0;}
 .home .GochinaBox .info{display: block;}
+.home .GochinaBox .info .s1title{line-height: 30px;padding-top: 10px;}
+.home .GochinaBox .info .stitle{font-size: 14px;}
 .home .GochinaBox .info .tip{width: 100%;margin-bottom: 20px;}
+
+.home .GochinaBox .info .tip .morenum{font-size: 20px;}
+
+
 .home .tripBox{padding: 50px 0;}
-.home .tripBox .tripinfo{display: block;}
+.home .tripBox .tripinfo{display: block;padding: 0;}
 .home .tripBox .tripinfo .trip-item{width: 100%;margin-bottom: 40px;}
 
 .home .welcomeBox{height: auto;padding-bottom: 150px;padding-top: 50px;font-size: 12px;}
